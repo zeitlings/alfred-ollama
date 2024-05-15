@@ -1,6 +1,6 @@
 <img src="images/ollama_icon.png" width="256px"/>
 
-# Ollama Alfred workflow
+# Ollama Alfred Workflow
 
 Dehydrated Ollama Command Line Interface interface to manage local LLMs.
 
