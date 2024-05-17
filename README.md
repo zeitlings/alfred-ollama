@@ -22,10 +22,15 @@ Access Ollama with the keyword (default: `ollama`) or define a keyboard shortcut
 - <kbd>⌘</kbd><kbd>C</kbd> to copy the model name.
 - <kbd>⌘</kbd><kbd>↩</kbd> to remove the model.
 
+### Loaded Models
+
+<img src="images/preview3.png" width="564px"/>
+
+- <kbd>⌘</kbd><kbd>↩</kbd> to unload the model.
 
 ### New Models
 
-<img src="images/preview3.png" width="564px"/>
+<img src="images/preview4.png" width="564px"/>
 
 Type to match models based on your query.  
 - <kbd>↩</kbd> to open the model page.
@@ -37,7 +42,7 @@ Type to match models based on your query.
 
 ### Model Versions
 
-<img src="images/preview4.png" width="564px"/>
+<img src="images/preview5.png" width="564px"/>
 
 Type to match versions based on your query.  
 - <kbd>↩</kbd> to open the model page.
@@ -47,7 +52,7 @@ Type to match versions based on your query.
 
 ### Pulling Models
 
-<img src="images/preview5.png" width="564px"/>
+<img src="images/preview6.png" width="564px"/>
 
 - <kbd>⌘</kbd><kbd>↩</kbd> to cancel the download.
 
