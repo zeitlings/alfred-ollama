@@ -1,8 +1,9 @@
-<img src="images/ollama_icon.png" width="256px"/>
+<p align=center><img src="images/ollama_icon.png" width="192px"/></p>
 
-# Ollama Alfred Workflow
+# Alfred Ollama
 
-Dehydrated Ollama Command Line Interface interface to manage local LLMs.  
+Dehydrated Ollama Command Line Interface interface to manage local LLMs. 
+
 <a href="https://github.com/zeitlings/alfred-ollama/releases/latest"><img src="https://img.shields.io/badge/download-v1.0.0-informational"></a>
 
 
