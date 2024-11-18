@@ -2,7 +2,7 @@
 
 # Alfred Ollama
 
-<a href="https://github.com/zeitlings/alfred-ollama/releases/latest"><img src="https://img.shields.io/badge/download-v1.0.0-informational"></a>
+<a href="https://github.com/zeitlings/alfred-ollama/releases/latest"><img src="https://img.shields.io/badge/download-v2.0.0-informational"></a>
 
 Dehydrated [Ollama](https://ollama.com/) Command Line Interface interface to
 1. Manage your local language models
