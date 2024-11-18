@@ -58,6 +58,14 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "&quot;Only one quote\&quot; !!?? Que pasaa&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;// &quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;/qwen2.5-coder/ &quot;"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
@@ -66,6 +74,18 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "&quot;true&quot;"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;NAME                       ID              SIZE      MODIFIED qwen2.5-coder:32b          4bd6cbf2d094    19 GB     4 days ago qwen2.5-coder:14b          3028237cc8c5    9.0 GB    4 days ago granite3-moe:1b            881c120886f6    821 MB    4 weeks ago aya:latest                 7ef8c4942023    4.8 GB    4 weeks ago nomic-embed-text:latest    0a109f422b47    274 MB    5 weeks ago hermes3:latest             b5c6c7cb379d    4.7 GB    2 months ago llama3.1:latest            91ab477bec9d    4.7 GB    3 months ago gemma2:9b                  ff02c3702f32    5.4 GB    3 months ago&quot;"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;&quot;"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;ollama version is 0.4.2&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

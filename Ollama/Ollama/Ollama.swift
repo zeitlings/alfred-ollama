@@ -103,7 +103,8 @@ extension Ollama {
 		
 		
 		do {
-			let models: [Model] = try JSONDecoder().decode(Models.self, from: Data(modelJSON.utf8)).models
+			//let models: [Model] = try JSONDecoder().decode(Models.self, from: Data(modelJSON.utf8)).models
+			let models: [Model] = try JSONDecoder().decode([Model].self, from: Data(modelJSON.utf8))
 			return models
 		} catch let DecodingError.keyNotFound(key, context) {
 			let debugMessage: String = "Decoding failure. Key <\(key.stringValue)> not found. Debug description: \(context.debugDescription). Context coding path: \(context.codingPath)"
@@ -383,7 +384,7 @@ enum DirectiveManage {
 	
 	init(_ query: inout String) {
 		switch true {
-		case query.firstMatch(of: /\/[\w-]+?\//) != nil:
+		case query.firstMatch(of: /\/[\w.-]+?\//) != nil:
 			self = .findModelsTag
 
 		case query.hasPrefix("///"):

@@ -17,7 +17,6 @@
 		4505FB0C2C0E218E00A9B11E /* InferenceAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4505FB0B2C0E218E00A9B11E /* InferenceAction.swift */; };
 		450A22662BF3AEDC002B1179 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A22652BF3AEDC002B1179 /* main.swift */; };
 		4597F59B2C19FB78001D0AF3 /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597F59A2C19FB78001D0AF3 /* Accessibility.swift */; };
-		4597F5A42C1B2FF6001D0AF3 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 4597F59D2C1B2126001D0AF3 /* Info.plist */; };
 		45C42F242CA9A4D700ED1ED1 /* Ollama.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C42F232CA9A4D700ED1ED1 /* Ollama.swift */; };
 		45C42F3F2CA9ACD800ED1ED1 /* Types+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C42F3E2CA9ACD800ED1ED1 /* Types+Extension.swift */; };
 		45C42F412CA9AD8D00ED1ED1 /* Ollama+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C42F402CA9AD8D00ED1ED1 /* Ollama+Model.swift */; };
@@ -183,7 +182,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4597F5A42C1B2FF6001D0AF3 /* Info.plist in Sources */,
 				45C42F242CA9A4D700ED1ED1 /* Ollama.swift in Sources */,
 				450A22662BF3AEDC002B1179 /* main.swift in Sources */,
 				4505FB0C2C0E218E00A9B11E /* InferenceAction.swift in Sources */,
@@ -346,7 +344,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_ON_DEMAND_RESOURCES = NO;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "$(SRCROOT)/Ollama/info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Ollama/Info.plist";
 				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zeitlings.alfred.ollama;
 				PRODUCT_NAME = "Alfred $(TARGET_NAME)";
@@ -367,7 +365,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_ON_DEMAND_RESOURCES = NO;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "$(SRCROOT)/Ollama/info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Ollama/Info.plist";
 				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zeitlings.alfred.ollama;
 				PRODUCT_NAME = "Alfred $(TARGET_NAME)";
