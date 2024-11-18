@@ -1,0 +1,172 @@
+module InferenceActions
+
+version: String = "1.0.3"
+author:  String = "Patrick Sy"
+updated: String = "2024-06-04"
+actions: Listing<InferenceAction>
+
+
+
+//hidden inputPlaceholder: String = "{input}"
+
+// Enum Cases
+// ====================================================
+// case store:  persist the result for later review
+// case chat:   start new chat and stream the result
+// case mk.ics: create calendar file(s) from the result
+typealias Completion = "store"|"chat"|"mk.ics"
+
+// Represents a specific action that can be triggered with the workflow. Defines an
+// inference task, its area of applicability, and the behaviour during and after its execution.
+//
+// Areas of applicability:
+// - for universal action and shortcut triggers
+// - for priming sessions (e.g. as translation engine)
+// - for snippet triggers [NB: currently not supported]
+class InferenceAction {
+
+    // The unique identifier of the action
+    identifier: String(!isEmpty)
+
+    // The name of the action.
+    name: String(!isEmpty)
+
+    // A description of the action explaining its purpose and function.
+    description: String(!isEmpty)
+
+    // An optional (internal) note about the action. May elaborate on the intended use and possible constraints.
+    note: String?
+
+    // Used by prototypes, this property propagates shared [system] definitions that are prepended to the effectively used system prompt.
+    hidden systemPreamble: String?
+
+    // The system prompt that specifies the inference task, or that elaborates on the task when amending a prototype with a defined [systemPreamble].
+    hidden system: String(!isEmpty || systemPreamble != null)
+
+    // The effectively used system prompt.
+    fixed systemPrompt: String = "\(systemPreamble ?? "") \(system)".trim()
+
+
+    // The prompt to use for inference. The `{input}` placeholder will be replaced with the input text. Sometimes required to produce a coherent answer.
+    promptTemplate: String? = """
+    Text: {input}
+
+    Your answer:
+    """
+
+    // Optional keywords to match the action when searching for it in Alfred.
+    keywords: String?
+
+    // Credit to the prompt author or reference to the source. Share your prompts!
+    contributors: List<String> = List("Patrick Sy")
+
+    // Paste to the frontmost application or just copy to the clipboard.
+    paste: Boolean = true
+
+    // Whether to simply paste into the frontmost application, replacing the selection or to include the selection.
+    preserveSelection: Boolean(requiresPaste) = false
+
+    // A series of key combos to be dispatched before pasting the result.
+    //keycombosBefore: Listing<Keycombo>(requiresPaste)?
+
+    // A series of key combos to be dispatched before evaluating the input.
+    // Currently unused.
+    keycombosBefore: Listing<Keycombo>?
+
+    // A series of key combos to be dispatched after pasting the result.
+    // Currently unused.
+    keycombosAfter: Listing<Keycombo>(requiresPaste)?
+
+    // A completion "tool call" to instruct the program on how to proccess the result.
+    completion: Completion?
+
+    // Whether to expect the user input to passed in as an argument or if the contents of the pasteboard should be evaluated.
+    usePasteboard: Boolean = false
+
+    // Whether the action should be included and displayed in the list filter when sending some content (currently only text) to the workflow's "Universal Action".
+    // For example, some action may be tailored to a specific app (see [frontmostApplication]) and intended to only be invoked with a keyboard shortcut or snippet.
+    // In that case the action should be only called directly and ignored for general purpose inference tasks.
+    isPublic: Boolean = true
+
+    // The bundle identifier of a specific application, e.g. 'com.apple.Notes'. Where set, the action is evaluated iff the frontmost application matches this identifier when calling the action. (Invoke via shortcut only).
+    frontmostApplication: String?
+
+    // The name of the model to use for inference. If not set, the default preferred model will be used.
+    modelOverride: String?
+
+    // A complete mirror of `ChatRequest.Options`
+    options: RequestOptions?
+
+    hidden requiresPaste = (val) ->
+        if (paste == false && val.ifNonNull((it) -> if (it is Boolean) it else true)) // fail if `it` is true or non-null
+            throw("Actions that define a preservation strategy or dispatch subsequent key combos must be set to paste (value is '\(val.toString())').")
+        else true
+
+
+
+}
+
+class RequestOptions {
+
+    // Enable Mirostat sampling for controlling perplexity. (default: 0, 0 = disabled, 1 = Mirostat, 2 = Mirostat 2.0)
+    mirostat: Int(this >= 0 && this <= 2)?
+
+    mirostatEta: Float(this >= 0.01 && this <= 1.0 /* && requiresMirostat*/)?
+
+    // Controls the balance between coherence and diversity of the output. A lower value will result in more focused and coherent text. (Default: 5.0)
+    mirostatTau: Float(this >= 0.01/* && requiresMirostat*/)?
+
+    hidden requiresMirostat = (_) ->
+        if (mirostat == 0)
+            throw("Actions that set a mirostat value must enable Mirostat sampling. Set `mirostat` to 1 or 2.")
+        else true
+
+    // Sets the size of the context window used to generate the next token. (Default: 2048)
+    numCtx: Int(this >=256)?
+
+    // Sets how far back for the model to look back to prevent repetition. (Default: 64, 0 = disabled, -1 = num_ctx)
+    repeatLastN: Int?
+
+    // Sets how strongly to penalize repetitions. A higher value (e.g., 1.5) will penalize repetitions more strongly, while a lower value (e.g., 0.9) will be more lenient. (Default: 1.1)
+    repeatPenalty: Float(this >= 0.01 && this <= 3.0)?
+
+    // The temperature of the model. Increasing the temperature will make the model answer more creatively. (Default: 0.8)
+    temperature: Float(this >= 0.01 && this <= 1.0)?
+
+    // Sets the random number seed to use for generation. Setting this to a specific number will make the model generate the same text for the same prompt. (Default: 0)
+    seed: Int?
+
+    stop: String?
+
+    // Tail free sampling is used to reduce the impact of less probable tokens from the output. A higher value (e.g., 2.0) will reduce the impact more, while a value of 1.0 disables this setting. (default: 1)
+    tfsZ: Float?
+
+    // Maximum number of tokens to predict when generating text. (Default: 128, -1 = infinite generation, -2 = fill context)
+    numPredict: Int?
+
+    // Reduces the probability of generating nonsense. A higher value (e.g. 100) will give more diverse answers, while a lower value (e.g. 10) will be more conservative. (Default: 40)
+    topK: Int(this >= 1 && this <= 200)?
+
+    // Works together with top-k. A higher value (e.g., 0.95) will lead to more diverse text, while a lower value (e.g., 0.5) will generate more focused and conservative text. (Default: 0.9)
+    topP: Float(this >= 0.01 && this <= 1.0)?
+
+    numGqa: Int?
+
+    numGpu: Int?
+
+    numThread: Int?
+}
+
+class Keycombo {
+
+    // TODO: Perhaps map characters to keycodes
+    // TODO: Perhaps define a constraint, e.g. must contain at least one modifier key.
+    // <https://pkl-lang.org/package-docs/pkl/0.25.3/base/String#codePoints>
+    //
+    // The sequence to dispatch, e.g. `⇧⌘←`
+    sequence: String
+
+    // The number of times to dispatch the key combo.
+    count: Int = 1
+
+}

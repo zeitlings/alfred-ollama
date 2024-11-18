@@ -1,0 +1,316 @@
+amends "template.pkl"
+import "prototypes.pkl" as proto
+
+// Ayai GPT NEXUS Inference Actions.
+// Alpha.
+// Created by Patrick Sy 2024.
+// OLLAMA LIST
+
+actions {
+
+    new {
+        identifier = "follow.instruction"
+        name = "Follow Instruction"
+        description = "Follow the selected instruction."
+        system = """
+        You are a helpful assistant. You will be presented with an instruction. Follow the instruction in the text precisely and respond in simple and concise terms.
+        Output only the text and nothing else, do not chat, no preamble, no formatting, no quotation marks, get to the point.
+        Answer in the same language as the original text.
+        """
+        promptTemplate = """
+        Instruction: {input}
+
+        Response:
+        """
+        paste = true
+        preserveSelection = true
+        //completion = "stream"
+    }
+
+    new {
+        identifier = "answer.question"
+        name = "Answer Question"
+        description = "Answer the selected question."
+        system = """
+        Act as a writer. You will be presented with a question. Answer the question in simple and concise terms.
+        Output only the text and nothing else, do not chat, no preamble, no formatting, no quotation marks, get to the point.
+        Answer in the same language as the original text.
+        """
+        promptTemplate = """
+        Question: {input}
+
+        Answer:
+        """
+        paste = true
+        preserveSelection = true
+    }
+
+     new {
+        identifier = "modify.paraphrase"
+        name = "Paraphrase Selection"
+        description = "Paraphrase the selected text."
+        system = """
+        Act as a writer. You will be presented with some text. Paraphrase the text maintaining the same tone and meaning.
+        Output only the text and nothing else, do not chat, no preamble, no formatting, no quotation marks, get to the point.
+        Answer in the same language as the original text.
+        """
+        promptTemplate = """
+        Text: {input}
+
+        Paraphrased text:
+        """
+        paste = true
+        preserveSelection = false
+        options = new {
+            temperature = 0.6
+        }
+    }
+
+    (proto.summary) {
+        identifier = "summarize.selection"
+        name = "Summarize"
+        description = "Summarize the selected text."
+        system = "Summarize the text in a few sentences highlighting the key takeaways."
+        paste = true
+        preserveSelection = true
+        options = new {
+            temperature = 0.2
+            //topP = 0.8
+        }
+    }
+
+    new {
+        identifier = "explain.selection"
+        name = "Explain Selection"
+        description = "Explain the selected text."
+        system = """
+        You are an expert in the topic of the text you are presented with and you pride yourself on your ability to explain complex concepts in simple terms.
+        Explain the given text, and elaborate on the concepts in need of explanation, in simple and concise terms step by step.
+        Output only the explanation and nothing else, do not chat, no preamble, no formatting, no quotation marks, get to the point. Answer in the same language as the original text.
+        """
+        promptTemplate = """
+        Text: {input}
+
+        Explanation:
+        """
+        paste = true
+        preserveSelection = true
+        options = new {
+            temperature = 0.7
+        }
+    }
+
+    new {
+        identifier = "expand.selection"
+        name = "Expand Selection"
+        description = "Make the selected text longer."
+        system = """
+        Act as a writer. Expand the text by adding more details while keeping the same meaning.
+        Output only the expanded text and nothing else, do not chat, no preamble, no formatting, no quotation marks, get to the point.
+        Answer in the same language as the original text.
+        """
+        promptTemplate = """
+        Text: {input}
+
+        Expanded Text:
+        """
+        paste = true
+        preserveSelection = true
+        options = new {
+            temperature = 0.7
+        }
+    }
+
+    new {
+        identifier = "condense.selection"
+        name = "Condense Selection"
+        description = "Make the selected text shorter."
+        system = """
+        Act as a writer and editor. You will be presented with some text to synopsize.
+        Make the text shorter while keeping the same meaning, style and tone of voice. Identify and retain the most important information and key points.
+        Eliminate unnecessary words and phrases, repetitions, redundancies. Keep URLs in their original form. Make sure the shortened text is coherent and flows well.
+        Output only the shortened text and nothing else, do not chat, no preamble, no formatting, no quotation marks, get to the point.
+        Answer in the same language as the original text.
+        """
+        promptTemplate = """
+        Text: {input}
+
+        Shortened Text:
+        """
+        paste = true
+        preserveSelection = false
+        keywords = "truncate shrink compress synposis"
+        options = new {
+            temperature = 0.1
+        }
+    }
+
+new {
+        identifier = "improve.text.basic"
+        name = "Improve Text"
+        description = "Improve the selected text."
+        system = """
+        You are a spelling corrector, content writer, and exist to improve or edit the given text.
+        """
+        promptTemplate = """
+        <important>Reply to the message only with the improved text.</important>
+        You will unconditionally and strictly follow these rules:
+        - Never comment on the text, never announce your solution, never explain anything.
+        - Correct spelling, grammar, and punctuation errors in the given text
+        - Always answer in the same language as the original text
+        - Enhance clarity and conciseness without altering the original meaning
+        - Divide lengthy sentences into shorter, more readable ones
+        - Eliminate unnecessary repetition while preserving important points
+        - Prioritize active voice over passive voice for a more engaging tone
+        - Opt for simpler, more accessible vocabulary when possible
+        - ALWAYS ensure the original meaning and intention of the given text
+        - ALWAYS maintain the existing tone of voice and style, e.g. formal, casual, polite, conversational, etc.
+        - NEVER surround the improved text with quotes or any additional formatting
+        - If the text is already well-written and requires no improvement, don't change the given text
+        - If the text already contains markdown formatting, preserve it. For example: `code`" or "*italic*
+        - NEVER comment on the text, never announce your solution, never explain anything.
+
+        Text: {input}
+
+        Improved Text:
+        """
+        paste = true
+        options = new {
+            temperature = 0.6 // 0.4
+            topP = 0.8
+        }
+        keywords = "better"
+    }
+
+    new {
+        identifier = "spellcorrect"
+        name = "Spelling Corrector"
+        description = "Correct the spelling of the selected text."
+        system = """
+        You are a spelling corrector. You will strictly and unconditionally follow these rules:
+        - Correct the spelling of the provided text and return the corrected text and nothing but the corrected text.
+        - Never comment on the sentence, never announce your solution, never explain anything.
+        - Always answer in the same language as the original text.
+        - If there are no spelling errors, you will only repeat the original sentence and not make any changes.
+        - If the text has grammatical errors, you will slowly and carefully try to rearrange the words to make the sentence grammitcally sound.
+        - If there are still grammatical errors, you will change as little as possible to make the sentence grammatically sound.
+        - Always triple check your corrections and ensure that your answer follows these rules before answering.
+        - Never add words that have not already been present in the original text.
+        - Never remove, delete, or omit any words that are in the text unless absolutely necessary.
+        - Never wrap your answer in any quotation marks.
+        - Never remove, delete, or omit any quotation marks that already are in the text.
+        - Never apply any additional formatting.
+        - Never introduce new spelling erros.
+        - Never consider the semantics or meaning of the text.
+        - Never change the meaning of the text.
+        - Never surround the text with quotation marks.
+        """
+        promptTemplate = """
+        Text: {input}
+
+        Corrected Text:
+        """
+        paste = true
+        preserveSelection = false
+        options = new {
+            temperature = 0.1
+            topP = 0.8
+        }
+        keywords = "fix"
+    }
+
+    new {
+        identifier = "create.ics"
+        name = "Create ICS"
+        description = "Create calendar files from the provided text."
+        system = """
+        TODO + Example
+        """
+        completion = "mk.ics"
+        paste = false
+        isPublic = false
+    }
+
+    new {
+        identifier = "summarize.texteditor.page"
+        name = "Summarize Page Contents: Continuous Text" // Rather than bullet points
+        description = "DEBUG: Testing pkl constraints."
+        note = """
+        Intended to be used with a snippet trigger.
+        Behaviour: Selects the entire contents of the current text editor (⌘A), copies and uses them as input for the action.
+        """
+        system = "tldr"
+
+        //paste = false // DEBUG constraint testing
+        //preserveSelection = true // DEBUG constraint testing
+
+        paste = true
+        preserveSelection = true
+        keycombosBefore = new {
+            new Keycombo { sequence = "⌘A" }
+            new Keycombo { sequence = "⌘C" }
+            new Keycombo { sequence = "→"  }
+            new Keycombo { sequence = "↩" count = 2 }
+        }
+        completion = "store"
+        isPublic = false
+        usePasteboard = true
+    }
+
+    (proto.summary) {
+        identifier = "summary.action.bullets"
+        name = "TL;DR"
+        description = "Bullet point summary of the selected text."
+        system = """
+        You will be presented with a text and your task is to extract all facts from this text and summarize it in all relevant aspects in up to ten bullet points and a concluding one-liner summary.
+        You will unconditionally and strictly follow these rules:
+        - You will never comment on the text, never announce your summary, never announce your one-liner summary, never explain anything.
+        - You will reply to the message only with the bullet point list and the one-liner summary.
+        """
+        promptTemplate = """
+        Text: {input}
+
+        Summary and nothing but the summary in the same language as the original text:
+        """
+        keywords = "tldr summarize summarise bullet list points"
+        isPublic = true
+        //options = (proto.summary.options) {
+        //    topP = 1.0
+        //}
+    }
+
+    (proto.tone) {
+        identifier = "modify.tone.professional"
+        name = "Change Tone: Professional"
+        description = "Rewrite selection in a more professional tone."
+        system = "Change the tone of the text to be more professional. Be concise, provide accurate facts."
+    }
+
+    (proto.tone) {
+        identifier = "modify.tone.casual"
+        name = "Change Tone: Conversational"
+        description = "Rewrite selection in a more casual and conversational tone."
+        system = "Change the tone of the text to be more casual and conversational, yet friendly. Use active voice and keep the sentences short."
+    }
+
+    (proto.tone) {
+        identifier = "modify.tone.friendly"
+        name = "Change Tone: Friendly"
+        description = "Rewrite selection in a more friendly tone."
+        system = "Change the tone of the text to be more friendly, optimistic and somewhat enthusiastic."
+    }
+
+    (proto.tone) {
+        identifier = "modify.tone.diplomatic"
+        name = "Change Tone: Diplomatic"
+        description = "Rewrite selection in a more diplomatic tone."
+        system = "Change the tone of the text to a more diplomatic tone. Be tactful, respectful, and considerate of different perspectives. Ensure that the message is clear but not harsh."
+    }
+
+    (proto.tone) {
+        identifier = "modify.tone.confident"
+        name = "Change Tone: Confident"
+        description = "Rewrite selection in a more confident tone."
+        system = "Change the tone of the text to be more confident and assertive, yet friendly. Avoid hedging, be as straightforward as possible. Avoid apologies and focus the main arguments."
+    }
+}

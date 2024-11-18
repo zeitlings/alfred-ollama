@@ -1,0 +1,35 @@
+import "template.pkl" as base
+
+summary = new base.InferenceAction {
+    identifier = "prototype.summary"
+    name = "[TEMPLATE] Summary"
+    description = "[TEMPLATE] Shared values for summary actions."
+    systemPreamble = "You are a summarization AI. You will only consider the text given to you. You will not add information that is not present in the text. You will not comment on the text, never announce your solution, never explain anything. You will never change the meaning of the text. You will always return a summary of the text."
+    system = ""
+    completion = "store"
+    options = new {
+        temperature = 0.05
+        topK = 25 // 40
+        topP = 0.7 // 0.9
+    }
+}
+
+tone = new base.InferenceAction {
+    identifier = "prototype.tone"
+    name = "[TEMPLATE] Tone"
+    description = "[TEMPLATE] Shared values for tone actions."
+    systemPreamble = "Act as a content writer and editor that changes the tone of text. Only consider the text you are presented with. Do not add information that is not present in the text. Do not change the meaning. Maintain URLs. Maintain roughly the same length. Correct spelling, grammar and puctiation errors. Output only the rewritten text and nothing else, do not chat, no preamble, no formatting (no 'single quotes' nor \"double quotes\"), no quotation marks, get to the point. Answer in the same language as the original text: if the original text is in German, answer in German; if the original text is in French, answer in French; etc."
+    system = ""
+    promptTemplate = """
+    Text: {input}
+
+    Rewritten and nothing but the rewritten text in the same language as the original text:
+    """
+    paste = true
+    preserveSelection = false
+    keywords = "style"
+    options = new {
+        temperature = 0.2
+    }
+
+}
