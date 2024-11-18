@@ -70,11 +70,11 @@ Type to match versions based on your query.
 
 ### Local Chat
 
-![Ollama local chat window preview](images/preview7.png)
+<img src="images/preview7.png" width="564px"/>
 
 #### Chat History
 
-![Ollama local chat history preview](images/preview8.png)
+<img src="images/preview8.png" width="564px"/>
 
 - <kbd>↩</kbd> Continue archived conversation.
 - <kbd>⌥</kbd> View modification date.
@@ -89,9 +89,9 @@ Type to match versions based on your query.
 
 Access a list of all available actions via the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) or by setting the [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) trigger.
 
-![Ollama inference actions universal action preview](images/preview9.png)
+<img src="images/preview9.png" width="564px"/>
 
-![Ollama inference actions filter preview](images/preview10.png)
+<img src="images/preview10.png" width="564px"/>
 
 - <kbd>↩</kbd> __Stream__ the result to the frontmost application.
 
