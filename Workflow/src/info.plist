@@ -1077,7 +1077,7 @@ echo -n "$1"</string>
 				<key>footertext</key>
 				<string>⏎ Ask question  ·  ⌘⏎ New chat  ·  ⌥⏎ View history  ·  ⇧⌥⏎ Stop</string>
 				<key>inputfile</key>
-				<string>ollama.sh</string>
+				<string>src/ollama.sh</string>
 				<key>inputtype</key>
 				<integer>1</integer>
 				<key>loadingtext</key>
@@ -1518,11 +1518,10 @@ mv "$chat_file_from_archive" "$chat_file_current"</string>
 				<string>Loading previous conversations...</string>
 				<key>script</key>
 				<string>if command -v swiftc &amp;&gt;/dev/null; then
-    swift ./src/Archive.swift "$1" # unusable
-else
 	[[ -f ./src/Archive ]] || swiftc -O ./src/Archive.swift -o ./src/Archive
 	./src/Archive "$1"
-    #swift ./src/Archive.swift "$1" # unusable
+else
+    swift ./src/Archive.swift "$1" # unusable
 fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -1955,7 +1954,7 @@ fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>ollama.sh</string>
+				<string>src/ollama.sh</string>
 				<key>skipuniversalaction</key>
 				<true/>
 				<key>subtext</key>
@@ -2362,7 +2361,7 @@ osascript -e "$ascript"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>ollama.sh</string>
+				<string>src/ollama.sh</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -2403,7 +2402,7 @@ osascript -e "$ascript"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>ollama.sh</string>
+				<string>src/ollama.sh</string>
 				<key>skipuniversalaction</key>
 				<true/>
 				<key>subtext</key>
@@ -2499,13 +2498,11 @@ Type to match models based on your query.
 - &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;L&lt;/kbd&gt; View the unabridged model description as large type.
 - &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;C&lt;/kbd&gt; Copy the model name.
 - &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Pull `model:latest` from registry.
-- &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Inspect available versions of the model.
+- &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; (or tap &lt;kbd&gt;⇥&lt;/kbd&gt;) Inspect available versions of the model.
 
 ### Model Versions
 
-![Ollama model versions](images/preview5_.png)
-
-&gt; __Note:__ Currently broken. Tags are unavailable via [source](https://ollama-models.zwz.workers.dev/), [#1](https://github.com/akazwz/ollama-models/issues/1).
+![Ollama model versions](images/preview5.png)
 
 Type to match versions based on your query.  
 - &lt;kbd&gt;↩&lt;/kbd&gt; Open the model page.
@@ -2516,7 +2513,7 @@ Type to match versions based on your query.
 ### Pulling Models
 
 ![Ollama pull progress](images/preview6.png)
-- &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; to cancel the download.
+- &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Cancel the download.
 
 
 ### Local Chat
@@ -2551,11 +2548,11 @@ Access a list of all available actions via the [Universal Action](https://www.al
 
 ---
 
-__Links:__  
+__Links__  
 * [ollama.com](https://ollama.com)
 * [Ollama Github FAQ](https://github.com/ollama/ollama/blob/main/docs/faq.md)
 
-__Footnotes__:  
+__Footnotes__  
 ¹ `xcode-select --install`</string>
 	<key>uidata</key>
 	<dict>
@@ -3289,32 +3286,11 @@ continue previous chats</string>
 			<key>variable</key>
 			<string>system_prompt</string>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<string></string>
-				<key>filtermode</key>
-				<integer>1</integer>
-				<key>placeholder</key>
-				<string>~Documents/AlfredOllama</string>
-				<key>required</key>
-				<false/>
-			</dict>
-			<key>description</key>
-			<string>Select a folder if you want to export backups of generated results to a specific location. Defaults to the workflow's data directory. [WIP]</string>
-			<key>label</key>
-			<string>Location</string>
-			<key>type</key>
-			<string>filepicker</string>
-			<key>variable</key>
-			<string>workflow_export_location</string>
-		</dict>
 	</array>
 	<key>variables</key>
 	<dict>
 		<key>DEV</key>
-		<string>/Library/Developer/Xcode/DerivedData/Ollama-cggdtyovzgempnalubhrfxmuuuip/Build/Products/Debug/Alfred Ollama</string>
+		<string>/Library/Developer/Xcode/DerivedData/Ollama-gveojumaikdecnfioxivavezkhtn/Build/Products/Debug/Alfred Ollama</string>
 		<key>chat_preferred_model</key>
 		<string>llama3.1:latest</string>
 		<key>mirostat</key>

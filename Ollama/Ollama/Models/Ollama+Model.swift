@@ -70,6 +70,7 @@ extension Models.Model {
 			$0.arg = .string(url)
 			$0.quicklookurl = url
 			$0.icon = isInstalled ? .available : nil
+			$0.autocomplete = "/\(name)/ "
 			
 			if !isInstalled {
 				$0.cmd = Modifier(
