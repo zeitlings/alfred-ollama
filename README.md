@@ -31,7 +31,7 @@ Manage your local models or chat with them via the `ollama` keyword. Alternative
 - <kbd>⇧</kbd> Quicklook preview the model page.
 - <kbd>⌘</kbd><kbd>C</kbd> Copy the model name.
 - <kbd>⌘</kbd><kbd>↩</kbd> Remove the model.
-- <kbd>⌥</kbd><kbd>↩</kbd> Set as preferred model for inference.
+- <kbd>⌥</kbd><kbd>↩</kbd> Set as __preferred model__ for inference.
 
 ### Loaded Models
 
@@ -69,6 +69,8 @@ Type to match versions based on your query.
 
 
 ### Local Chat
+
+Before chatting, ensure you have set a __preferred model__ as specified above. Otherwise, the chat will default to the first available model in your list of installed models.
 
 <img src="images/preview7.png" width="564px"/>
 
