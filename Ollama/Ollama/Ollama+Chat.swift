@@ -14,7 +14,7 @@ extension Ollama {
 		do {
 			switch Workflow.chatDirective {
 			case .readStream:  	  try self.readStream()
-			case .displayChat: 	  try self.displayConversation()
+			case .displayChat: 	  try self.showConversation()
 			case .continueStream: try self.continueStreaming()
 			case .startStream: 	  try self.startStreamBySpawning()
 			case .writeStream: 	  try self.writeStreamFromSpawned()
@@ -41,6 +41,7 @@ enum OllamaChatError: Error, LocalizedError {
 // MARK: - Read Stream
 extension Ollama {
 	static func readStream() throws {
+		
 		if Workflow.beginContinueStreaming {
 			Workflow.return(.beginContinueStreamingResponse)
 		}
@@ -64,15 +65,18 @@ extension Ollama {
 		if !finished {
 			response.rerun = 0.1
 			response.signal(.nowStreaming)
-			response.response?.append(" 􀀁")
+			response.response?.append(" ●")
 			response.behaviour = .init(.replacelast, .auto) // .end
 		} else {
 			let messages: [Message] = try FileHandler.appendChat(.assistant, content: streamedMessage)
 			response.response = messages.formattedMarkdown
 			response.behaviour = .init(.replace, .auto) // .end
+			if Workflow.showModelInFooter, let model: String = Ollama.preferredModel {
+				response.footer = "⏎ Ask question  ·  ⌘⏎ New chat  ·  ⌥⏎ View history  ·  ⇧⌥⏎ Stop  〈    \(model)"
+			}
 			try? FileHandler.removeStreamFile()
 			try? FileHandler.removePIDFile()
-			//Self.setLifetime()
+			
 		}
 		Workflow.return(response)
 	}
@@ -100,7 +104,7 @@ extension Ollama {
 
 // MARK: - View Chat
 extension Ollama {
-	static func displayConversation() throws {
+	static func showConversation() throws {
 		let messages: [Message] = {
 			if let messages: [Message] = try? FileHandler.chatMessages() {
 				return messages
@@ -116,6 +120,10 @@ extension Ollama {
 		Workflow.return(.with({
 			$0.response = messages.formattedMarkdown
 			$0.behaviour = .init(scroll: .end)
+			if Workflow.showModelInFooter, let model: String = Ollama.preferredModel {
+//				$0.footer = "⏎ Ask question  ·  ⌘⏎ New chat  ·  ⌥⏎ View history  ·  ⇧⌥⏎ Stop  〈     \(model)"
+				$0.footer = "\(model)    〉  ⏎ Ask question  ·  ⌘⏎ New chat  ·  ⌥⏎ View history  ·  ⇧⌥⏎ Stop"
+			}
 		}))
 	}
 }
@@ -174,7 +182,7 @@ extension Ollama {
 	}
 	
 	/// Preload the model when opening the chat window
-	/// - Note:Dispatched at `displayConversation()` if the preferred model is not already loaded. Ignores `Environment.ollamaModelLifetime`.
+	/// - Note:Dispatched at `showConversation()` if the preferred model is not already loaded. Ignores `Environment.ollamaModelLifetime`.
 	static func preloadModel() {
 		guard let preferredModel else { return }
 		//Workflow.log("Preloading preferred model", .info)

@@ -13,6 +13,11 @@ extension Workflow {
 	static let shouldContinueStreaming: Bool = FileHandler.streamFileExists
 	static let beginContinueStreaming: Bool = Environment.environment["stream_continuation_marker"] == "true"
 	static let preStreamFeedbackGiven: Bool = Environment.environment["gave_feedback"] == "true"
+	static let showModelInFooter: Bool = Environment.environment["show_model_chat_footer"] == "1"
+	static let isWriting: Bool = {
+		let args: [String] = CommandLine.arguments
+		return args.indices.contains(7) && args[7] == Environment.startStreamArgumentToken
+	}()
 }
 
 // MARK: Workflow+Chat+Markdown
@@ -34,18 +39,12 @@ extension Workflow {
 	}
 	
 	static var chatDirective: DirectiveChat {
-		let args: [String] = CommandLine.arguments
 		switch true {
-		case args.indices.contains(7) && args[7] == Environment.startStreamArgumentToken:
-			return .writeStream
-		case isStreaming:
-			return .readStream
-		case shouldContinueStreaming:
-			return .continueStream
-		case !Ollama.userInput.isEmpty:
-			return .startStream
-		default:
-			return .displayChat
+		case isWriting: 				return .writeStream
+		case isStreaming:				return .readStream
+		case shouldContinueStreaming:	return .continueStream
+		case !Ollama.userInput.isEmpty: return .startStream
+		default: 						return .displayChat
 		}
 	}
 	

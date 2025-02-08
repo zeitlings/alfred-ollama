@@ -39,3 +39,9 @@ extension Array where Element == Message {
 		})
 	}
 }
+
+extension Decodable {
+	static func decoded(from data: Data, decoder: JSONDecoder = .init()) throws -> Self {
+		try decoder.decode(Self.self, from: data)
+	}
+}

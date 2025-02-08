@@ -6,23 +6,24 @@
 
 import Foundation
 
-
 // MARK: - Action ScriptFilter Methods
 extension Ollama {
 	
 	static func listActions() {
 		do {
 			let inferenceActionJSON: Data = try Data(contentsOf: URL.inferenceActionsFile)
-			let actions: [InferenceAction] = try JSONDecoder().decode(ActionsWrapper.self, from: inferenceActionJSON).actions
+			let actions: [InferenceAction] = try ActionsWrapper.decoded(from: inferenceActionJSON).actions
 			let items: [Item] = actions.compactMap({ $0.alfredItem })
 			Workflow.return(ScriptFilterResponse(items: items))
 			
 		} catch let DecodingError.dataCorrupted(context) {
 			let debugMessage: String = "[Data Corrupted] \(context.debugDescription).\n Coding Path: \(context.codingPath)"
 			Workflow.quit(debugMessage)
+			
 		} catch let DecodingError.keyNotFound(key, context) {
 			let debugMessage: String = "[Decoding Failure] Key <\(key.stringValue)> not found. Debug description: \(context.debugDescription). Context coding path: \(context.codingPath)"
 			Workflow.quit(debugMessage)
+			
 		} catch {
 			Workflow.quit(error.localizedDescription)
 		}
@@ -37,7 +38,7 @@ extension Ollama {
 				Workflow.quit("No user input.")
 			}
 			let inferenceActionJSON: Data = try Data(contentsOf: URL.inferenceActionsFile)
-			let actions: [InferenceAction] = try JSONDecoder().decode(ActionsWrapper.self, from: inferenceActionJSON).actions
+			let actions: [InferenceAction] = try ActionsWrapper.decoded(from: inferenceActionJSON).actions
 			guard let action: InferenceAction = actions.first(where: { $0.identifier == actionId }) else {
 				Workflow.quit("Cannot find action with identifier '\(actionId)'.")
 			}

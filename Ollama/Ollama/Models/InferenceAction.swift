@@ -105,12 +105,27 @@ extension InferenceAction {
 			$0.text = Text(copy: name, largetype: "\(name)\n\(description)\n\(note ?? "")")
 			$0.valid = true
 			$0.match = "\(name) \(description) \(keywords ?? "")"
+			
 			/// NB: The user input is expected to exist in the environment variables as `action_payload`.
 			/// Set throught the workflow canvas.
-			$0.variables = .nested([
+			let streamVars: Argument = .nested([
 				"action_dispatch_id": .string(identifier),
 				"workflow_program_state": .string(Environment.ProgramState.generate.rawValue)
 			])
+			
+			if let payload: String = Environment.inferenceActionPayload {
+				$0.variables = .nested([
+					"workflow_program_state": .string(Environment.ProgramState.chat.rawValue),
+					"inference_action_chat_prompt": .string("\(self.systemPrompt)\n\n\(self.prompt(injecting: payload))"),
+				])
+				
+				$0.cmd = Modifier(
+					subtitle: "Stream to frontmost window.",
+					variables: streamVars
+				)
+			} else {
+				$0.variables = streamVars
+			}
 		}
 	}
 }
@@ -130,14 +145,16 @@ extension InferenceAction {
 			return Ollama.preferredModel!
 		}()
 		
-		let prompt: String = {
-			if let promptTemplate: String {
-				return promptTemplate.replacing(promptTemplatePlaceholder, with: "'\(payload)'")
-			}
-			return payload
-		}()
+		let prompt: String = self.prompt(injecting: payload)
 		
 		return .init(model: model, prompt: prompt, options: options?.into(), stream: stream, system: systemPrompt)
+	}
+	
+	func prompt(injecting payload: String) -> String {
+		if let promptTemplate: String {
+			return promptTemplate.replacing(promptTemplatePlaceholder, with: "'\(payload)'")
+		}
+		return payload
 	}
 	
 }

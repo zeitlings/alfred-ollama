@@ -30,7 +30,7 @@ struct ChatRequest: Encodable {
 	}
 	
 	/// `/api/generate` endpoint initializer
-	init(model: String, prompt: String, options: Options?, stream: Bool = false, system: String? /*= Environment.systemPrompt*/) {
+	init(model: String, prompt: String, options: Options?, stream: Bool = false, system: String?) {
 		self.stream = stream
 		self.model = model
 		self.messages = nil
