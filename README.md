@@ -95,7 +95,8 @@ Access a list of all available actions via the [Universal Action](https://www.al
 
 <img src="images/preview10.png" width="564px"/>
 
-- <kbd>↩</kbd> __Stream__ the result to the frontmost application.
+- <kbd>↩</kbd> Generate answer in new window.
+- <kbd>⌘</kbd><kbd>↩</kbd> __Stream__ the result to the frontmost application.
 
 > [!IMPORTANT] 
 > Make sure you only use this if the frontmost UI Element accepts text.  
