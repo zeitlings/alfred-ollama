@@ -66,11 +66,11 @@ extension Ollama {
 			response.rerun = 0.1
 			response.signal(.nowStreaming)
 			response.response?.append(" ●")
-			response.behaviour = .init(.replacelast, .auto) // .end
+			response.behaviour = .init(.replacelast, .auto)
 		} else {
 			let messages: [Message] = try FileHandler.appendChat(.assistant, content: streamedMessage)
 			response.response = messages.formattedMarkdown
-			response.behaviour = .init(.replace, .auto) // .end
+			response.behaviour = .init(.replace, .auto)
 			if Workflow.showModelInFooter, let model: String = Ollama.preferredModel {
 				response.footer = "⏎ Ask question  ·  ⌘⏎ New chat  ·  ⌥⏎ View history  ·  ⇧⌥⏎ Stop  〈    \(model)"
 			}
@@ -121,8 +121,7 @@ extension Ollama {
 			$0.response = messages.formattedMarkdown
 			$0.behaviour = .init(scroll: .end)
 			if Workflow.showModelInFooter, let model: String = Ollama.preferredModel {
-//				$0.footer = "⏎ Ask question  ·  ⌘⏎ New chat  ·  ⌥⏎ View history  ·  ⇧⌥⏎ Stop  〈     \(model)"
-				$0.footer = "\(model)    〉  ⏎ Ask question  ·  ⌘⏎ New chat  ·  ⌥⏎ View history  ·  ⇧⌥⏎ Stop"
+				$0.footer = "⏎ Ask question  ·  ⌘⏎ New chat  ·  ⌥⏎ View history  ·  ⇧⌥⏎ Stop  〈    \(model)"
 			}
 		}))
 	}
