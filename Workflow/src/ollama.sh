@@ -1,9 +1,13 @@
 #!/bin/zsh --no-rcs
 
+SCHEME="${workflow_scheme:-http}"
+HOST="${workflow_host:-localhost}"
+PORT="${workflow_port:-11434}"
+
+model_json="${alfred_workflow_cache:-/tmp/alfred_ollama}/models.json"
 installed_models=""
 loaded_models=""
 ollama_version=""
-model_json="${alfred_workflow_cache}/models.json"
 is_ollama_running=false
 
 update_models() {
@@ -13,7 +17,12 @@ update_models() {
     fi
 }
 
-[[ -z $(lsof -nP -i4TCP:${workflow_port}) ]] || is_ollama_running=true
+poke_ollama() {
+    curl -s "$SCHEME://${HOST}:${PORT}/api/version" >/dev/null 2>&1
+    echo $?
+}
+
+[[ $(poke_ollama) -eq 0 ]] && is_ollama_running=true
 [[ -d ${alfred_workflow_cache} ]] || /bin/mkdir -p "${alfred_workflow_cache}"
 [[ -f ${model_json} ]] || update_models
 
@@ -39,6 +48,11 @@ fi
 
 readonly args=("$1" "$model_json" $is_ollama_running "$installed_models" "$loaded_models" "$ollama_version")
 
-xattr -d com.apple.quarantine ./src/Ollama >/dev/null 2>&1
-./src/Ollama "${args[@]}"
-#"${HOME}${DEV}" "${args[@]}"
+if [[ -f "${HOME}${DEV}" ]]; then
+    "${HOME}${DEV}" "${args[@]}"
+else
+    # Feel free to build the binary from source.
+    # See <https://github.com/zeitlings/alfred-ollama>
+    xattr -d com.apple.quarantine ./src/AlfredOllama >/dev/null 2>&1
+    ./src/AlfredOllama "${args[@]}"
+fi

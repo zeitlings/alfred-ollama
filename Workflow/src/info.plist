@@ -34,6 +34,33 @@
 				<false/>
 			</dict>
 		</array>
+		<key>163B85D5-EDE9-4C35-BCC2-70D10D6653C9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E64D5D9E-6D00-4763-BB53-AB84F42CD78E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>_button1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A4E7B5F2-436A-43B9-B74B-28DFB56AEF7C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>_button2</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>177AC84D-FD49-40B5-A3B0-451887A21EA4</key>
 		<array>
 			<dict>
@@ -70,6 +97,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>2065F9EA-585E-4575-9883-9D852F969E9D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B6BB7A19-68B5-45D7-AA9B-C2A301F0A07C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>2413169A-CE87-49CD-B569-16A958167230</key>
 		<array>
 			<dict>
@@ -79,6 +119,33 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>24C56675-3715-422A-AE2F-445065855955</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>65CC1546-E51C-4611-B530-9996571356AE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>9AAA2291-37F8-4A6E-A23D-8410D8B1B3A5</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>2065F9EA-585E-4575-9883-9D852F969E9D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>92170DEF-B938-4978-BB02-6659A2D9E362</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -125,7 +192,7 @@
 				<key>destinationuid</key>
 				<string>E0B83D29-C6A8-4A50-BAA3-2956EBBBCCC1</string>
 				<key>modifiers</key>
-				<integer>655360</integer>
+				<integer>262144</integer>
 				<key>modifiersubtext</key>
 				<string>⏎ Cancel response generation</string>
 				<key>vitoclose</key>
@@ -137,7 +204,7 @@
 				<key>modifiers</key>
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
-				<string>View chat history</string>
+				<string>⏎ View chat history</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -188,32 +255,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>82A2A100-2722-4E1D-BB77-F0DFBAEA5100</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>666073F2-3E58-48E0-81F0-0DBA2630788C</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>1DB757D3-B9FC-4E71-81A1-EB168FF83138</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>6B94AA8F-BA22-455B-AA06-6F30F453B8A5</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>D4B35AFE-480B-4AF6-8EB0-D103EC4FCA7B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -351,7 +392,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>E64D5D9E-6D00-4763-BB53-AB84F42CD78E</string>
+				<string>163B85D5-EDE9-4C35-BCC2-70D10D6653C9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -394,18 +435,6 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>032D532D-F01A-4572-9E08-AB92D3A3D017</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>666073F2-3E58-48E0-81F0-0DBA2630788C</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>2549CB32-9BD0-4896-B7C0-671866DFBD86</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -458,7 +487,7 @@
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 		</array>
 		<key>9763AA08-95C1-44A1-8333-FDC07FBE1594</key>
@@ -484,7 +513,7 @@
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -501,7 +530,20 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>65CC1546-E51C-4611-B530-9996571356AE</string>
+				<string>24C56675-3715-422A-AE2F-445065855955</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
+		<key>A4E7B5F2-436A-43B9-B74B-28DFB56AEF7C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B0D3DE75-C5BD-4702-9849-7248A0C0E843</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -534,6 +576,19 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>C0F82CCF-0766-4718-9E08-B607633C5B1C</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B0D3DE75-C5BD-4702-9849-7248A0C0E843</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0B1BBCDA-9820-4ACE-A058-AAE0624D0D3D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -675,7 +730,7 @@
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 		</array>
 		<key>D4B3A07F-B949-44A7-8A76-9D7A3B10A224</key>
@@ -757,6 +812,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>97CA317E-797E-421F-982E-F2F2DF4E9807</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E29321E4-9F9B-4728-A7E7-95BF3A410E75</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8CD2D79F-5B38-4D5F-9898-6D6EF63CCD48</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -875,67 +943,23 @@ open $(mdfind kMDItemCFBundleIdentifier = "com.electron.ollama")</string>
 			<key>type</key>
 			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
-			<string>CEEB23FD-3552-498B-99AF-90776CAF0C05</string>
+			<string>A3087F7E-CD09-4EF0-8C32-FBD1193B23A1</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>readonly timestamp=$(date +"%Y%m%d-%H%M-")
-readonly uuid=${"$(uuidgen)":l:gs/\-/}
-readonly archive="${alfred_workflow_data}/archive"
-readonly archived_chat_file="${archive}/${timestamp}${uuid}.json"
-readonly chat_file="${alfred_workflow_cache}/chat.json"
-readonly stream_file="${alfred_workflow_cache}/stream.txt"
-
-[[ -d "$archive" ]] || mkdir -p "$archive"
-
-# case: keep starting new conversations
-if [[ -a "$chat_file" ]]; then
-	if [[ $enable_archiving -eq 1 ]]; then
-		mv "$chat_file" "$archived_chat_file"
-	else 
-		rm "$chat_file"
-	fi
-fi
-
-if [[ -a "$stream_file" ]]; then
-	rm "${stream_file}"
-fi
-
-echo -n "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
-			<string>B56E3A4A-66C0-4A98-89B0-5DCB31CECE92</string>
+			<string>ECEB02D0-B7FA-499A-B21F-CBBDAE7AD892</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>config</key>
-			<dict>
-				<key>availableviaurlhandler</key>
-				<false/>
-				<key>triggerid</key>
-				<string>chat.new</string>
-			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
+			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
-			<string>2E1A1C20-CE54-41EE-BB8A-26208E21F380</string>
+			<string>CEEB23FD-3552-498B-99AF-90776CAF0C05</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1027,6 +1051,458 @@ echo -n "$1"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>4EBB4EE5-517C-41B1-B56A-38C1015156B6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>7CE53231-C334-448E-AC34-33DCB2DBA5B5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>chat.view</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>D7ACDF55-1F47-4113-8789-473AFDD87342</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>31</integer>
+				<key>hotmod</key>
+				<integer>655360</integer>
+				<key>hotstring</key>
+				<string>O</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>2</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>CF73FF6F-9E5B-41C7-BDBE-4E570F2D3F99</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>~ {var:pulled_model}</string>
+				<key>title</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>A19BD909-5D69-4EFF-BBD4-53C420953E20</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>readonly cache="$alfred_workflow_cache"
+readonly log_file="${cache}/pull_progress.txt"
+readonly info_file="${cache}/pull_info.txt"
+readonly canceled_file="${cache}/pull_canceled.txt"
+
+echo -n "$1" &gt; "$info_file"
+
+# ollama pull "$1" &amp;&gt; &gt;(tee "$log_file" &gt; /dev/null) &amp;
+ollama pull "$1" &amp;&gt; "$log_file" &amp; 
+
+# # Not the PID of the actual pull process.
+# # We cannot use it to cancel the download
+# # but to confirm that it is still running.
+pid=$!
+
+while ps -p $pid &gt; /dev/null; do
+	sleep 1
+done
+
+# # End the process if it is still lingering.
+if ps -p $pid &gt; /dev/null; then
+	# kill $pid
+	killall ollama
+fi
+
+/bin/rm $log_file
+/bin/rm $info_file
+
+if [[ -f $canceled_file ]]; then
+	/bin/rm $canceled_file
+	echo -n "Download Canceled"
+
+else
+	echo -n "Download Complete"
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>9763AA08-95C1-44A1-8333-FDC07FBE1594</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>pulled_model</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>E06C9018-0F20-4D97-8727-01B8C353E562</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>init</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>FF4B9971-0A0C-41A2-BB53-83A4D210134D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:trigger}</string>
+						<key>matchcasesensitive</key>
+						<true/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>start</string>
+						<key>outputlabel</key>
+						<string>Start Ollama</string>
+						<key>uid</key>
+						<string>00AE4221-75F3-4492-8AE8-8B05CAFAAE62</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:trigger}</string>
+						<key>matchcasesensitive</key>
+						<true/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>stop</string>
+						<key>outputlabel</key>
+						<string>Quit Ollama</string>
+						<key>uid</key>
+						<string>657C03C5-5F3A-424D-AEC1-A74A87CF40F8</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:trigger}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>open</string>
+						<key>outputlabel</key>
+						<string>Open External</string>
+						<key>uid</key>
+						<string>FBB355BD-7113-470C-A6EE-9D29E3E8B311</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:trigger}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>pull</string>
+						<key>outputlabel</key>
+						<string>Pull Model</string>
+						<key>uid</key>
+						<string>DA714EAB-55F1-4366-BA68-79524AC093B7</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:trigger}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>init</string>
+						<key>outputlabel</key>
+						<string>Loop ←</string>
+						<key>uid</key>
+						<string>62DA9489-8F26-4E0E-BA6C-E35293F58CF7</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:trigger}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>remove</string>
+						<key>outputlabel</key>
+						<string>Remove Model</string>
+						<key>uid</key>
+						<string>761A1181-4527-4E46-9BA6-411106C8C46E</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:trigger}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>cancel</string>
+						<key>outputlabel</key>
+						<string>Cancel Pull</string>
+						<key>uid</key>
+						<string>F3F0358E-1DE7-4F3D-AA9C-7DDDC2DA6EA2</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:trigger}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>unload</string>
+						<key>outputlabel</key>
+						<string>Unload Model</string>
+						<key>uid</key>
+						<string>63BED437-9333-48B4-9169-F4079D9CC9DC</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:trigger}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>chat.continue</string>
+						<key>outputlabel</key>
+						<string>Continue Chat</string>
+						<key>uid</key>
+						<string>032D532D-F01A-4572-9E08-AB92D3A3D017</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:trigger}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>model.set.preference</string>
+						<key>outputlabel</key>
+						<string>Set preferred Model</string>
+						<key>uid</key>
+						<string>02F1045A-AEF9-4444-9CBF-FAB3DBAE8A3A</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+				<key>hideelse</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>8058801E-523E-4EC8-9951-A04EF5ADE061</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>readonly timestamp=$(date +"%Y%m%d-%H%M-")
+readonly uuid=${"$(uuidgen)":l:gs/\-/}
+readonly archive="${alfred_workflow_data}/archive"
+readonly archived_chat_file="${archive}/${timestamp}${uuid}.json"
+readonly chat_file="${alfred_workflow_cache}/chat.json"
+readonly stream_file="${alfred_workflow_cache}/stream.txt"
+
+[[ -d "$archive" ]] || mkdir -p "$archive"
+
+# case: keep starting new conversations
+if [[ -a "$chat_file" ]]; then
+	if [[ $enable_archiving -eq 1 ]]; then
+		mv "$chat_file" "$archived_chat_file"
+	else 
+		rm "$chat_file"
+	fi
+fi
+
+if [[ -a "$stream_file" ]]; then
+	rm "${stream_file}"
+fi
+
+echo -n "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B56E3A4A-66C0-4A98-89B0-5DCB31CECE92</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>chat.new</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>2E1A1C20-CE54-41EE-BB8A-26208E21F380</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>0.1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>AA6EDEAA-7030-46E1-B9B6-516DB0DB0EB3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>E1A4CCE8-E134-44A3-B097-917005741A24</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>/ </string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>08CD3A9B-E5F0-4F09-8B16-BF8E6706F3E9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -1049,6 +1525,137 @@ echo -n "$1"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Ollama</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>E23B15B5-57BF-4670-BD8E-B23FAA38768C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>ollama rm "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>177AC84D-FD49-40B5-A3B0-451887A21EA4</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>{var:key}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>src/ollama.sh</string>
+				<key>skipuniversalaction</key>
+				<true/>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Ollama CLI Interface</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>inboundconfig</key>
+			<dict>
+				<key>externalid</key>
+				<string>init</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>D4B35AFE-480B-4AF6-8EB0-D103EC4FCA7B</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>31</integer>
+				<key>hotmod</key>
+				<integer>1310720</integer>
+				<key>hotstring</key>
+				<string>O</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>2</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>D4B3A07F-B949-44A7-8A76-9D7A3B10A224</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>externaltriggerid</key>
 				<string>chat.new</string>
 				<key>passinputasargument</key>
@@ -1066,6 +1673,36 @@ echo -n "$1"</string>
 			<integer>1</integer>
 		</dict>
 		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>E64D5D9E-6D00-4763-BB53-AB84F42CD78E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>button1</key>
+				<string>Ok</string>
+				<key>button2</key>
+				<string>Cancel</string>
+				<key>button3</key>
+				<string></string>
+				<key>description</key>
+				<string>Do you really want to remove 
+'{query}'?</string>
+				<key>title</key>
+				<string>Deleting Model</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.dialog</string>
+			<key>uid</key>
+			<string>163B85D5-EDE9-4C35-BCC2-70D10D6653C9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
 			<key>config</key>
 			<dict>
 				<key>behaviour</key>
@@ -1075,7 +1712,7 @@ echo -n "$1"</string>
 				<key>fontsizing</key>
 				<integer>0</integer>
 				<key>footertext</key>
-				<string>⏎ Ask question  ·  ⌘⏎ New chat  ·  ⌥⏎ View history  ·  ⇧⌥⏎ Stop</string>
+				<string>⏎ Ask question  ·  ⌘⏎ New chat  ·  ⌥⏎ View history  ·  ⌃⏎ Stop</string>
 				<key>inputfile</key>
 				<string>src/ollama.sh</string>
 				<key>inputtype</key>
@@ -1095,27 +1732,6 @@ echo -n "$1"</string>
 			<string>alfred.workflow.userinterface.text</string>
 			<key>uid</key>
 			<string>3ED04D13-C8B8-4AF8-9C28-8052D778DBA0</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>4EBB4EE5-517C-41B1-B56A-38C1015156B6</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1205,14 +1821,6 @@ fi</string>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>7CE53231-C334-448E-AC34-33DCB2DBA5B5</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
@@ -1277,52 +1885,27 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>chat.view</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
+				<key>argument</key>
+				<string>/ </string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
+			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>D7ACDF55-1F47-4113-8789-473AFDD87342</string>
+			<string>B0D3DE75-C5BD-4702-9849-7248A0C0E843</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>31</integer>
-				<key>hotmod</key>
-				<integer>655360</integer>
-				<key>hotstring</key>
-				<string>O</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>2</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
+			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
-			<string>CF73FF6F-9E5B-41C7-BDBE-4E570F2D3F99</string>
+			<string>A4E7B5F2-436A-43B9-B74B-28DFB56AEF7C</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1343,84 +1926,6 @@ fi</string>
 			<string>B4DF38A8-37F3-4243-9ABA-271DA6E0A83F</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>~ {var:pulled_model}</string>
-				<key>title</key>
-				<string>{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>A19BD909-5D69-4EFF-BBD4-53C420953E20</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>readonly cache="$alfred_workflow_cache"
-readonly log_file="${cache}/pull_progress.txt"
-readonly info_file="${cache}/pull_info.txt"
-readonly canceled_file="${cache}/pull_canceled.txt"
-
-echo -n "$1" &gt; "$info_file"
-
-# ollama pull "$1" &amp;&gt; &gt;(tee "$log_file" &gt; /dev/null) &amp;
-ollama pull "$1" &amp;&gt; "$log_file" &amp; 
-
-# # Not the PID of the actual pull process.
-# # We cannot use it to cancel the download
-# # but to confirm that it is still running.
-pid=$!
-
-while ps -p $pid &gt; /dev/null; do
-	sleep 1
-done
-
-# # End the process if it is still lingering.
-if ps -p $pid &gt; /dev/null; then
-	# kill $pid
-	killall ollama
-fi
-
-/bin/rm $log_file
-/bin/rm $info_file
-
-if [[ -f $canceled_file ]]; then
-	/bin/rm $canceled_file
-	echo -n "Download Canceled"
-
-else
-	echo -n "Download Complete"
-fi</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>9763AA08-95C1-44A1-8333-FDC07FBE1594</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1567,438 +2072,6 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>{query}</string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>pulled_model</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>E06C9018-0F20-4D97-8727-01B8C353E562</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>31</integer>
-				<key>hotmod</key>
-				<integer>1310720</integer>
-				<key>hotstring</key>
-				<string>O</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>2</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>D4B3A07F-B949-44A7-8A76-9D7A3B10A224</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:trigger}</string>
-						<key>matchcasesensitive</key>
-						<true/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>start</string>
-						<key>outputlabel</key>
-						<string>Start Ollama</string>
-						<key>uid</key>
-						<string>00AE4221-75F3-4492-8AE8-8B05CAFAAE62</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:trigger}</string>
-						<key>matchcasesensitive</key>
-						<true/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>stop</string>
-						<key>outputlabel</key>
-						<string>Quit Ollama</string>
-						<key>uid</key>
-						<string>657C03C5-5F3A-424D-AEC1-A74A87CF40F8</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:trigger}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>open</string>
-						<key>outputlabel</key>
-						<string>Open External</string>
-						<key>uid</key>
-						<string>FBB355BD-7113-470C-A6EE-9D29E3E8B311</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:trigger}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>pull</string>
-						<key>outputlabel</key>
-						<string>Pull Model</string>
-						<key>uid</key>
-						<string>DA714EAB-55F1-4366-BA68-79524AC093B7</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:trigger}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>init</string>
-						<key>outputlabel</key>
-						<string>Loop ←</string>
-						<key>uid</key>
-						<string>62DA9489-8F26-4E0E-BA6C-E35293F58CF7</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:trigger}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>remove</string>
-						<key>outputlabel</key>
-						<string>Remove Model</string>
-						<key>uid</key>
-						<string>761A1181-4527-4E46-9BA6-411106C8C46E</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:trigger}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>cancel</string>
-						<key>outputlabel</key>
-						<string>Cancel Pull</string>
-						<key>uid</key>
-						<string>F3F0358E-1DE7-4F3D-AA9C-7DDDC2DA6EA2</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:trigger}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>unload</string>
-						<key>outputlabel</key>
-						<string>Unload Model</string>
-						<key>uid</key>
-						<string>63BED437-9333-48B4-9169-F4079D9CC9DC</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:trigger}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>chat.continue</string>
-						<key>outputlabel</key>
-						<string>Continue Chat</string>
-						<key>uid</key>
-						<string>032D532D-F01A-4572-9E08-AB92D3A3D017</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:trigger}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>chat.new</string>
-						<key>outputlabel</key>
-						<string>New Chat</string>
-						<key>uid</key>
-						<string>2549CB32-9BD0-4896-B7C0-671866DFBD86</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:trigger}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>model.set.preference</string>
-						<key>outputlabel</key>
-						<string>Set preferred Model</string>
-						<key>uid</key>
-						<string>02F1045A-AEF9-4444-9CBF-FAB3DBAE8A3A</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>else</string>
-				<key>hideelse</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>8058801E-523E-4EC8-9951-A04EF5ADE061</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>init</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>FF4B9971-0A0C-41A2-BB53-83A4D210134D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>seconds</key>
-				<string>0.1</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.delay</string>
-			<key>uid</key>
-			<string>AA6EDEAA-7030-46E1-B9B6-516DB0DB0EB3</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>E1A4CCE8-E134-44A3-B097-917005741A24</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>tasksettings</key>
-				<dict/>
-				<key>taskuid</key>
-				<string>com.alfredapp.automation.core/files-and-folders/path.trash</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.automation.task</string>
-			<key>uid</key>
-			<string>CC5EA396-08A8-44C8-9754-4CD3FD244653</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>chat.view.archive</string>
-				<key>passinputasargument</key>
-				<false/>
-				<key>passvariables</key>
-				<false/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>1001A941-E99C-4CBF-B633-9ED7FD7D7226</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>/ </string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>08CD3A9B-E5F0-4F09-8B16-BF8E6706F3E9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Ollama</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>E23B15B5-57BF-4670-BD8E-B23FAA38768C</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>ollama rm "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>177AC84D-FD49-40B5-A3B0-451887A21EA4</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>{var:key}</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>src/ollama.sh</string>
-				<key>skipuniversalaction</key>
-				<true/>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Ollama CLI Interface</string>
-				<key>type</key>
-				<integer>8</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>D4B35AFE-480B-4AF6-8EB0-D103EC4FCA7B</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>availableviaurlhandler</key>
-				<false/>
-				<key>triggerid</key>
-				<string>init</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>6B94AA8F-BA22-455B-AA06-6F30F453B8A5</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>E64D5D9E-6D00-4763-BB53-AB84F42CD78E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -2037,7 +2110,13 @@ killall ollama</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>curl -s http://localhost:${workflow_port}/api/generate -d "{\"model\": \"$1\", \"keep_alive\": 0}"</string>
+				<string>SCHEME="${workflow_scheme:-http}"
+HOST="${workflow_host:-localhost}"
+PORT="${workflow_port:-11434}"
+
+export OLLAMA_HOST="$SCHEME://${HOST}:${PORT}"
+
+ollama stop "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -2068,6 +2147,40 @@ killall ollama</string>
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
 			<string>0B1BBCDA-9820-4ACE-A058-AAE0624D0D3D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>tasksettings</key>
+				<dict/>
+				<key>taskuid</key>
+				<string>com.alfredapp.automation.core/files-and-folders/path.trash</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.automation.task</string>
+			<key>uid</key>
+			<string>CC5EA396-08A8-44C8-9754-4CD3FD244653</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>chat.view.archive</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<false/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>1001A941-E99C-4CBF-B633-9ED7FD7D7226</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2121,39 +2234,63 @@ killall ollama</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>chat.new</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>31</integer>
+				<key>hotmod</key>
+				<integer>1572864</integer>
+				<key>hotstring</key>
+				<string>O</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>2</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
+			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
-			<string>1DB757D3-B9FC-4E71-81A1-EB168FF83138</string>
+			<string>CA11937D-DD93-4A06-845A-5E0ECAEAD23D</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>{query}</string>
-				<key>passthroughargument</key>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>\w</string>
+						<key>outputlabel</key>
+						<string></string>
+						<key>uid</key>
+						<string>C0F82CCF-0766-4718-9E08-B607633C5B1C</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+				<key>hideelse</key>
 				<true/>
-				<key>variables</key>
-				<dict>
-					<key>workflow_program_state</key>
-					<string>chat</string>
-				</dict>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
+			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
-			<string>666073F2-3E58-48E0-81F0-0DBA2630788C</string>
+			<string>AFA9F4D6-875C-4A3C-B81F-4BC5C107E8C9</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2249,69 +2386,6 @@ osascript -e "$ascript"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>1</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>31</integer>
-				<key>hotmod</key>
-				<integer>1572864</integer>
-				<key>hotstring</key>
-				<string>O</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>2</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>CA11937D-DD93-4A06-845A-5E0ECAEAD23D</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>4</integer>
-						<key>matchstring</key>
-						<string>\w</string>
-						<key>outputlabel</key>
-						<string></string>
-						<key>uid</key>
-						<string>C0F82CCF-0766-4718-9E08-B607633C5B1C</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>else</string>
-				<key>hideelse</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>AFA9F4D6-875C-4A3C-B81F-4BC5C107E8C9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
@@ -2327,27 +2401,6 @@ osascript -e "$ascript"</string>
 			<string>82A2A100-2722-4E1D-BB77-F0DFBAEA5100</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>acceptsfiles</key>
-				<false/>
-				<key>acceptsmulti</key>
-				<integer>0</integer>
-				<key>acceptstext</key>
-				<true/>
-				<key>acceptsurls</key>
-				<false/>
-				<key>name</key>
-				<string>Ollama · All Inference Actions</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.universalaction</string>
-			<key>uid</key>
-			<string>96DCA678-7769-4C53-976F-2CFD34829250</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2371,6 +2424,27 @@ osascript -e "$ascript"</string>
 			<string>65CC1546-E51C-4611-B530-9996571356AE</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsfiles</key>
+				<false/>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>acceptstext</key>
+				<true/>
+				<key>acceptsurls</key>
+				<false/>
+				<key>name</key>
+				<string>Ollama · All Inference Actions</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.universalaction</string>
+			<key>uid</key>
+			<string>96DCA678-7769-4C53-976F-2CFD34829250</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2424,6 +2498,52 @@ osascript -e "$ascript"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:workflow_program_state}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>generate</string>
+						<key>outputlabel</key>
+						<string>Stream: Generate</string>
+						<key>uid</key>
+						<string>9AAA2291-37F8-4A6E-A23D-8410D8B1B3A5</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:workflow_program_state}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>chat</string>
+						<key>outputlabel</key>
+						<string>Stream: Chat</string>
+						<key>uid</key>
+						<string>92170DEF-B938-4978-BB02-6659A2D9E362</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+				<key>hideelse</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>24C56675-3715-422A-AE2F-445065855955</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -2443,6 +2563,42 @@ osascript -e "$ascript"</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>chat.new</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>B6BB7A19-68B5-45D7-AA9B-C2A301F0A07C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:inference_action_chat_prompt}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>2065F9EA-585E-4575-9883-9D852F969E9D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>![](icon-hat.png)
@@ -2450,7 +2606,7 @@ osascript -e "$ascript"</string>
 # Alfred Ollama
 
 ---  
-Created by [Patrick Sy](https://github.com/zeitlings) | [Github](https://github.com/zeitlings/alfred-ollama) |  [Alfred Forum](https://www.alfredforum.com/topic/21851-ollama/) | [Buy me a Coffee](https://ko-fi.com/zeitlings) ☕  
+Created by [Patrick Sy](https://github.com/zeitlings) | [Github](https://github.com/zeitlings/alfred-ollama) | [More Workflows](https://github.com/zeitlings/alfred-workflows) |  [Alfred Forum](https://www.alfredforum.com/topic/21851-ollama/) | [Buy me a Coffee](https://ko-fi.com/zeitlings) ☕  
 ---  
 
 Dehydrated [Ollama](https://ollama.com/) Command Line Interface interface
@@ -2460,7 +2616,7 @@ Dehydrated [Ollama](https://ollama.com/) Command Line Interface interface
 
 ## Requirements
 
-The Ollama [macOS application](https://ollama.com/download), at least one installed [model](https://ollama.com/library) for chat or other inference tasks, and the Xcode Command Line Tools.¹ To modify or add custom inference actions to the workflow's [universal action](https://www.alfredapp.com/help/features/universal-actions/), install [pkl](https://pkl-lang.org/main/current/pkl-cli/index.html#homebrew), edit the configuration file and build the inference tasks.
+The Ollama [macOS application](https://ollama.com/download), at least one installed [model](https://ollama.com/library) for chat or other inference tasks, and the Xcode Command Line Tools.¹ To modify or add custom inference actions to the workflow's [Universal Action](https://www.alfredapp.com/help/features/universal-actions/), install [pkl](https://pkl-lang.org/main/current/pkl-cli/index.html#homebrew), edit the configuration file and build the inference tasks.
 
 ## Usage
 
@@ -2476,11 +2632,17 @@ Manage your local models or chat with them via the `ollama` keyword. Alternative
 
 ![Ollama installed models](images/preview2.png)
 
-- &lt;kbd&gt;↩&lt;/kbd&gt; Open the model page.
-- &lt;kbd&gt;⇧&lt;/kbd&gt; Quicklook preview the model page.
+- &lt;kbd&gt;↩&lt;/kbd&gt; (or tap &lt;kbd&gt;⇥&lt;/kbd&gt;) Show model information.
+- &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;Y&lt;/kbd&gt; (or tap &lt;kbd&gt;⇧&lt;/kbd&gt;) Quick Look the model page.
+- &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Open the model page.
 - &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;C&lt;/kbd&gt; Copy the model name.
-- &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Remove the model.
-- &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Set as preferred model for inference.
+- &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Set as __preferred model__ for inference.
+- &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Remove the model.
+
+![Ollama installed models with model information](images/preview2.1.png)
+- &lt;kbd&gt;↩&lt;/kbd&gt; (or tap &lt;kbd&gt;⇥&lt;/kbd&gt;) Return to installed models.
+- &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;L&lt;/kbd&gt; View model info digest as [Large Type](https://www.alfredapp.com/help/features/large-type/).
+
 
 ### Loaded Models
 
@@ -2494,7 +2656,7 @@ Manage your local models or chat with them via the `ollama` keyword. Alternative
 
 Type to match models based on your query.  
 - &lt;kbd&gt;↩&lt;/kbd&gt; Open the model page.
-- &lt;kbd&gt;⇧&lt;/kbd&gt; Quicklook preview the model page.
+- &lt;kbd&gt;⇧&lt;/kbd&gt; Quick Look preview the model page.
 - &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;L&lt;/kbd&gt; View the unabridged model description as large type.
 - &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;C&lt;/kbd&gt; Copy the model name.
 - &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Pull `model:latest` from registry.
@@ -2506,7 +2668,7 @@ Type to match models based on your query.
 
 Type to match versions based on your query.  
 - &lt;kbd&gt;↩&lt;/kbd&gt; Open the model page.
-- &lt;kbd&gt;⇧&lt;/kbd&gt; Quicklook preview the model page.
+- &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;Y&lt;/kbd&gt; (or tap &lt;kbd&gt;⇧&lt;/kbd&gt;) Quick Look the model page.
 - &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;C&lt;/kbd&gt; Copy the model name.
 - &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Pull `model:version` from registry.
 
@@ -2541,7 +2703,8 @@ Access a list of all available actions via the [Universal Action](https://www.al
 
 ![Ollama inference actions filter preview](images/preview10.png)
 
-- &lt;kbd&gt;↩&lt;/kbd&gt; __Stream__ the result to the frontmost application.
+- &lt;kbd&gt;↩&lt;/kbd&gt; Generate answer in new window.
+- &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; __Stream__ the result to the frontmost application.
 
 &gt; __Warning:__ Make sure you only use this if the frontmost UI Element accepts text.  
 &gt; There are no security checks in place at the moment.
@@ -2559,121 +2722,135 @@ __Footnotes__
 		<key>08CD3A9B-E5F0-4F09-8B16-BF8E6706F3E9</key>
 		<dict>
 			<key>xpos</key>
-			<real>945</real>
+			<real>915</real>
 			<key>ypos</key>
-			<real>625</real>
+			<real>635</real>
 		</dict>
 		<key>0B1BBCDA-9820-4ACE-A058-AAE0624D0D3D</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>1005</real>
+			<real>985</real>
 			<key>ypos</key>
-			<real>965</real>
+			<real>985</real>
 		</dict>
 		<key>0CF96764-912B-459F-A35F-D34F279EBC2E</key>
 		<dict>
 			<key>xpos</key>
-			<real>700</real>
+			<real>680</real>
 			<key>ypos</key>
-			<real>995</real>
+			<real>1015</real>
 		</dict>
 		<key>1001A941-E99C-4CBF-B633-9ED7FD7D7226</key>
 		<dict>
 			<key>xpos</key>
-			<real>1990</real>
+			<real>2125</real>
 			<key>ypos</key>
-			<real>610</real>
+			<real>990</real>
 		</dict>
 		<key>146CD0AD-A04B-487A-BFD0-F0C0D2047E98</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>5</integer>
+			<integer>4</integer>
 			<key>xpos</key>
-			<real>785</real>
+			<real>765</real>
 			<key>ypos</key>
-			<real>1110</real>
+			<real>1130</real>
+		</dict>
+		<key>163B85D5-EDE9-4C35-BCC2-70D10D6653C9</key>
+		<dict>
+			<key>xpos</key>
+			<real>575</real>
+			<key>ypos</key>
+			<real>695</real>
 		</dict>
 		<key>177AC84D-FD49-40B5-A3B0-451887A21EA4</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
 			<key>note</key>
 			<string>remove</string>
 			<key>xpos</key>
-			<real>785</real>
+			<real>765</real>
 			<key>ypos</key>
-			<real>675</real>
+			<real>660</real>
 		</dict>
 		<key>1D9DCD60-2505-442D-9CAA-76E468676B67</key>
 		<dict>
 			<key>xpos</key>
-			<real>700</real>
+			<real>680</real>
 			<key>ypos</key>
-			<real>850</real>
-		</dict>
-		<key>1DB757D3-B9FC-4E71-81A1-EB168FF83138</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>1</integer>
-			<key>xpos</key>
-			<real>785</real>
-			<key>ypos</key>
-			<real>1225</real>
+			<real>870</real>
 		</dict>
 		<key>1EB91DCF-DB20-4DAC-9793-00D281261D7B</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>1005</real>
+			<real>985</real>
 			<key>ypos</key>
 			<real>40</real>
+		</dict>
+		<key>2065F9EA-585E-4575-9883-9D852F969E9D</key>
+		<dict>
+			<key>xpos</key>
+			<real>2125</real>
+			<key>ypos</key>
+			<real>1475</real>
 		</dict>
 		<key>2413169A-CE87-49CD-B569-16A958167230</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>5</integer>
+			<integer>4</integer>
 			<key>xpos</key>
-			<real>1245</real>
+			<real>1360</real>
 			<key>ypos</key>
-			<real>320</real>
+			<real>700</real>
+		</dict>
+		<key>24C56675-3715-422A-AE2F-445065855955</key>
+		<dict>
+			<key>xpos</key>
+			<real>1910</real>
+			<key>ypos</key>
+			<real>1365</real>
 		</dict>
 		<key>25974AD9-E0AB-486C-AEAD-D67EE9FD2D52</key>
 		<dict>
 			<key>note</key>
 			<string>killall</string>
 			<key>xpos</key>
-			<real>785</real>
+			<real>765</real>
 			<key>ypos</key>
-			<real>820</real>
+			<real>840</real>
 		</dict>
 		<key>2E1A1C20-CE54-41EE-BB8A-26208E21F380</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>5</integer>
+			<integer>4</integer>
 			<key>xpos</key>
-			<real>1245</real>
+			<real>1360</real>
 			<key>ypos</key>
-			<real>180</real>
+			<real>565</real>
 		</dict>
 		<key>3008CC28-BB0A-4657-AAC8-158C35130637</key>
 		<dict>
 			<key>xpos</key>
-			<real>1575</real>
+			<real>1710</real>
 			<key>ypos</key>
-			<real>350</real>
+			<real>730</real>
 		</dict>
 		<key>3ED04D13-C8B8-4AF8-9C28-8052D778DBA0</key>
 		<dict>
 			<key>xpos</key>
-			<real>1660</real>
+			<real>1795</real>
 			<key>ypos</key>
-			<real>320</real>
+			<real>700</real>
 		</dict>
 		<key>4EBB4EE5-517C-41B1-B56A-38C1015156B6</key>
 		<dict>
 			<key>xpos</key>
-			<real>785</real>
+			<real>765</real>
 			<key>ypos</key>
 			<real>320</real>
 		</dict>
@@ -2682,9 +2859,9 @@ __Footnotes__
 			<key>note</key>
 			<string>preferred model</string>
 			<key>xpos</key>
-			<real>785</real>
+			<real>765</real>
 			<key>ypos</key>
-			<real>1345</real>
+			<real>1260</real>
 		</dict>
 		<key>53988529-DE39-4FFD-A4FF-5241C19299B4</key>
 		<dict>
@@ -2693,48 +2870,30 @@ __Footnotes__
 			<key>note</key>
 			<string>New Chat</string>
 			<key>xpos</key>
-			<real>1865</real>
+			<real>2000</real>
 			<key>ypos</key>
-			<real>275</real>
+			<real>655</real>
 		</dict>
 		<key>539FA66A-25BF-493E-854B-CDDD036B9FCF</key>
 		<dict>
 			<key>xpos</key>
-			<real>705</real>
+			<real>685</real>
 			<key>ypos</key>
-			<real>1140</real>
+			<real>1160</real>
 		</dict>
 		<key>5DE7C5A6-D4CB-482D-A669-7DE9FCBBC3D7</key>
 		<dict>
 			<key>xpos</key>
-			<real>935</real>
+			<real>915</real>
 			<key>ypos</key>
-			<real>1375</real>
+			<real>1290</real>
 		</dict>
 		<key>65CC1546-E51C-4611-B530-9996571356AE</key>
 		<dict>
 			<key>xpos</key>
-			<real>640</real>
+			<real>2125</real>
 			<key>ypos</key>
-			<real>1565</real>
-		</dict>
-		<key>666073F2-3E58-48E0-81F0-0DBA2630788C</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>1</integer>
-			<key>xpos</key>
-			<real>710</real>
-			<key>ypos</key>
-			<real>1255</real>
-		</dict>
-		<key>6B94AA8F-BA22-455B-AA06-6F30F453B8A5</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>70</real>
-			<key>ypos</key>
-			<real>675</real>
+			<real>1330</real>
 		</dict>
 		<key>6BEBA574-0EB2-42BE-B5A2-1C7FFD218D75</key>
 		<dict>
@@ -2743,9 +2902,9 @@ __Footnotes__
 			<key>note</key>
 			<string>→ View Chat History</string>
 			<key>xpos</key>
-			<real>70</real>
+			<real>1360</real>
 			<key>ypos</key>
-			<real>255</real>
+			<real>240</real>
 		</dict>
 		<key>752C973D-0621-486F-A80A-E76529BE2F2C</key>
 		<dict>
@@ -2753,55 +2912,55 @@ __Footnotes__
 			<string>Swap Chats
 Archive Conversation</string>
 			<key>xpos</key>
-			<real>1615</real>
+			<real>1750</real>
 			<key>ypos</key>
-			<real>455</real>
+			<real>835</real>
 		</dict>
 		<key>7A208A99-2801-453C-A16D-C36894B378D1</key>
 		<dict>
 			<key>note</key>
 			<string>unload</string>
 			<key>xpos</key>
-			<real>785</real>
+			<real>765</real>
 			<key>ypos</key>
-			<real>965</real>
+			<real>985</real>
 		</dict>
 		<key>7CE53231-C334-448E-AC34-33DCB2DBA5B5</key>
 		<dict>
 			<key>xpos</key>
-			<real>700</real>
+			<real>680</real>
 			<key>ypos</key>
 			<real>350</real>
 		</dict>
 		<key>7D1D7989-523F-45CA-A25E-CBFDA2471974</key>
 		<dict>
 			<key>xpos</key>
-			<real>700</real>
+			<real>680</real>
 			<key>ypos</key>
 			<real>210</real>
 		</dict>
 		<key>8058801E-523E-4EC8-9951-A04EF5ADE061</key>
 		<dict>
 			<key>xpos</key>
-			<real>415</real>
+			<real>365</real>
 			<key>ypos</key>
 			<real>560</real>
 		</dict>
 		<key>82A2A100-2722-4E1D-BB77-F0DFBAEA5100</key>
 		<dict>
 			<key>xpos</key>
-			<real>785</real>
+			<real>2270</real>
 			<key>ypos</key>
-			<real>1565</real>
+			<real>1330</real>
 		</dict>
 		<key>8826751C-7549-456A-8074-476E95473D23</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>1005</real>
+			<real>985</real>
 			<key>ypos</key>
-			<real>1345</real>
+			<real>1260</real>
 		</dict>
 		<key>8CD2D79F-5B38-4D5F-9898-6D6EF63CCD48</key>
 		<dict>
@@ -2813,18 +2972,18 @@ Archive Conversation</string>
 		<key>8DDAFAD4-11A8-402F-8D99-893699F54A3F</key>
 		<dict>
 			<key>xpos</key>
-			<real>2380</real>
+			<real>2530</real>
 			<key>ypos</key>
-			<real>305</real>
+			<real>685</real>
 		</dict>
 		<key>8ECD12A1-968F-4C78-AD41-A2804D093062</key>
 		<dict>
 			<key>note</key>
 			<string>kill process and clean up</string>
 			<key>xpos</key>
-			<real>1975</real>
+			<real>2125</real>
 			<key>ypos</key>
-			<real>320</real>
+			<real>700</real>
 		</dict>
 		<key>96DCA678-7769-4C53-976F-2CFD34829250</key>
 		<dict>
@@ -2834,25 +2993,25 @@ Archive Conversation</string>
 			<string>Universal Actions /
 Inference Tasks</string>
 			<key>xpos</key>
-			<real>70</real>
+			<real>1360</real>
 			<key>ypos</key>
-			<real>1565</real>
+			<real>1345</real>
 		</dict>
 		<key>9763AA08-95C1-44A1-8333-FDC07FBE1594</key>
 		<dict>
 			<key>note</key>
 			<string>pull</string>
 			<key>xpos</key>
-			<real>785</real>
+			<real>765</real>
 			<key>ypos</key>
 			<real>435</real>
 		</dict>
 		<key>97CA317E-797E-421F-982E-F2F2DF4E9807</key>
 		<dict>
 			<key>xpos</key>
-			<real>2380</real>
+			<real>2530</real>
 			<key>ypos</key>
-			<real>455</real>
+			<real>835</real>
 		</dict>
 		<key>9E76D2C9-9A06-481A-9336-9DB17A51B5B8</key>
 		<dict>
@@ -2860,37 +3019,62 @@ Inference Tasks</string>
 			<string>View chat history /
 continue previous chats</string>
 			<key>xpos</key>
-			<real>1395</real>
+			<real>1530</real>
 			<key>ypos</key>
-			<real>455</real>
+			<real>835</real>
 		</dict>
 		<key>A0C182A2-61AE-4916-9A15-612383B2CD5C</key>
 		<dict>
 			<key>xpos</key>
-			<real>415</real>
+			<real>1750</real>
 			<key>ypos</key>
-			<real>1565</real>
+			<real>1345</real>
 		</dict>
 		<key>A19BD909-5D69-4EFF-BBD4-53C420953E20</key>
 		<dict>
 			<key>xpos</key>
-			<real>1005</real>
+			<real>985</real>
 			<key>ypos</key>
 			<real>435</real>
+		</dict>
+		<key>A3087F7E-CD09-4EF0-8C32-FBD1193B23A1</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>4</integer>
+			<key>note</key>
+			<string>Ollama Inference</string>
+			<key>xpos</key>
+			<real>1400</real>
+			<key>ypos</key>
+			<real>70</real>
+		</dict>
+		<key>A4E7B5F2-436A-43B9-B74B-28DFB56AEF7C</key>
+		<dict>
+			<key>xpos</key>
+			<real>680</real>
+			<key>ypos</key>
+			<real>790</real>
 		</dict>
 		<key>AA6EDEAA-7030-46E1-B9B6-516DB0DB0EB3</key>
 		<dict>
 			<key>xpos</key>
-			<real>785</real>
+			<real>765</real>
 			<key>ypos</key>
-			<real>595</real>
+			<real>580</real>
 		</dict>
 		<key>AFA9F4D6-875C-4A3C-B81F-4BC5C107E8C9</key>
 		<dict>
 			<key>xpos</key>
-			<real>225</real>
+			<real>1535</real>
 			<key>ypos</key>
-			<real>1475</real>
+			<real>1235</real>
+		</dict>
+		<key>B0D3DE75-C5BD-4702-9849-7248A0C0E843</key>
+		<dict>
+			<key>xpos</key>
+			<real>910</real>
+			<key>ypos</key>
+			<real>790</real>
 		</dict>
 		<key>B4DF38A8-37F3-4243-9ABA-271DA6E0A83F</key>
 		<dict>
@@ -2899,64 +3083,71 @@ continue previous chats</string>
 			<key>note</key>
 			<string>View history</string>
 			<key>xpos</key>
-			<real>1865</real>
+			<real>2000</real>
 			<key>ypos</key>
-			<real>425</real>
+			<real>805</real>
 		</dict>
 		<key>B56E3A4A-66C0-4A98-89B0-5DCB31CECE92</key>
 		<dict>
 			<key>note</key>
 			<string>New Chat / Archive</string>
 			<key>xpos</key>
-			<real>1395</real>
+			<real>1530</real>
 			<key>ypos</key>
-			<real>180</real>
+			<real>565</real>
+		</dict>
+		<key>B6BB7A19-68B5-45D7-AA9B-C2A301F0A07C</key>
+		<dict>
+			<key>xpos</key>
+			<real>2270</real>
+			<key>ypos</key>
+			<real>1445</real>
 		</dict>
 		<key>B96FEEC3-67C6-4DC1-B528-4B237F8B837D</key>
 		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
 			<key>xpos</key>
-			<real>710</real>
+			<real>690</real>
 			<key>ypos</key>
-			<real>1375</real>
+			<real>1290</real>
 		</dict>
 		<key>B9AD1EA0-9C43-4DA2-936E-09BAA765D87F</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>5</integer>
+			<integer>4</integer>
 			<key>xpos</key>
-			<real>1245</real>
+			<real>1360</real>
 			<key>ypos</key>
-			<real>455</real>
+			<real>835</real>
 		</dict>
 		<key>C1318AE2-21C9-4DD9-BC02-034517E4412D</key>
 		<dict>
 			<key>note</key>
 			<string>start</string>
 			<key>xpos</key>
-			<real>785</real>
+			<real>765</real>
 			<key>ypos</key>
 			<real>40</real>
 		</dict>
 		<key>CA11937D-DD93-4A06-845A-5E0ECAEAD23D</key>
 		<dict>
+			<key>note</key>
+			<string>→ Inference Actions</string>
 			<key>xpos</key>
-			<real>70</real>
+			<real>1360</real>
 			<key>ypos</key>
-			<real>1445</real>
+			<real>1205</real>
 		</dict>
 		<key>CC5EA396-08A8-44C8-9754-4CD3FD244653</key>
 		<dict>
 			<key>xpos</key>
-			<real>1615</real>
+			<real>1750</real>
 			<key>ypos</key>
-			<real>610</real>
+			<real>990</real>
 		</dict>
 		<key>CEEB23FD-3552-498B-99AF-90776CAF0C05</key>
 		<dict>
 			<key>xpos</key>
-			<real>700</real>
+			<real>680</real>
 			<key>ypos</key>
 			<real>70</real>
 		</dict>
@@ -2967,41 +3158,41 @@ continue previous chats</string>
 			<key>note</key>
 			<string>→ View Chat</string>
 			<key>xpos</key>
-			<real>70</real>
+			<real>1360</real>
 			<key>ypos</key>
 			<real>400</real>
 		</dict>
 		<key>D4B35AFE-480B-4AF6-8EB0-D103EC4FCA7B</key>
 		<dict>
 			<key>xpos</key>
-			<real>255</real>
+			<real>215</real>
 			<key>ypos</key>
-			<real>675</real>
+			<real>660</real>
 		</dict>
 		<key>D4B3A07F-B949-44A7-8A76-9D7A3B10A224</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>7</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>→ Manage Ollama</string>
 			<key>xpos</key>
-			<real>70</real>
+			<real>60</real>
 			<key>ypos</key>
-			<real>540</real>
+			<real>660</real>
 		</dict>
 		<key>D7ACDF55-1F47-4113-8789-473AFDD87342</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>5</integer>
+			<integer>4</integer>
 			<key>xpos</key>
-			<real>240</real>
+			<real>1530</real>
 			<key>ypos</key>
 			<real>400</real>
 		</dict>
 		<key>E06C9018-0F20-4D97-8727-01B8C353E562</key>
 		<dict>
 			<key>xpos</key>
-			<real>700</real>
+			<real>680</real>
 			<key>ypos</key>
 			<real>465</real>
 		</dict>
@@ -3012,78 +3203,91 @@ continue previous chats</string>
 			<key>note</key>
 			<string>Cancel</string>
 			<key>xpos</key>
-			<real>1865</real>
+			<real>2000</real>
 			<key>ypos</key>
-			<real>350</real>
+			<real>730</real>
 		</dict>
 		<key>E1A4CCE8-E134-44A3-B097-917005741A24</key>
 		<dict>
 			<key>xpos</key>
-			<real>700</real>
+			<real>680</real>
 			<key>ypos</key>
-			<real>595</real>
+			<real>580</real>
 		</dict>
 		<key>E206127B-B7A8-49CF-A3FD-A8EB159679FE</key>
 		<dict>
 			<key>xpos</key>
-			<real>2200</real>
+			<real>2350</real>
 			<key>ypos</key>
-			<real>340</real>
+			<real>720</real>
 		</dict>
 		<key>E23B15B5-57BF-4670-BD8E-B23FAA38768C</key>
 		<dict>
 			<key>xpos</key>
-			<real>1005</real>
+			<real>985</real>
 			<key>ypos</key>
-			<real>675</real>
+			<real>660</real>
 		</dict>
 		<key>E29321E4-9F9B-4728-A7E7-95BF3A410E75</key>
 		<dict>
 			<key>note</key>
 			<string>quit</string>
 			<key>xpos</key>
-			<real>785</real>
+			<real>765</real>
 			<key>ypos</key>
 			<real>180</real>
 		</dict>
 		<key>E64D5D9E-6D00-4763-BB53-AB84F42CD78E</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
 			<key>xpos</key>
-			<real>700</real>
+			<real>680</real>
 			<key>ypos</key>
-			<real>705</real>
+			<real>690</real>
 		</dict>
 		<key>EB0F6EFF-3033-4E2C-808B-CD68DE3C78E7</key>
 		<dict>
 			<key>xpos</key>
-			<real>315</real>
+			<real>1645</real>
 			<key>ypos</key>
-			<real>1595</real>
+			<real>1375</real>
+		</dict>
+		<key>ECEB02D0-B7FA-499A-B21F-CBBDAE7AD892</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>Ollama Manage</string>
+			<key>xpos</key>
+			<real>100</real>
+			<key>ypos</key>
+			<real>70</real>
 		</dict>
 		<key>ED372711-DF2A-4A34-9310-55E1FDAE39E2</key>
 		<dict>
 			<key>xpos</key>
-			<real>2125</real>
+			<real>2275</real>
 			<key>ypos</key>
-			<real>350</real>
+			<real>730</real>
 		</dict>
 		<key>EDC8F087-8597-4F25-98B2-E401D1613259</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>5</integer>
+			<integer>4</integer>
 			<key>xpos</key>
-			<real>240</real>
+			<real>1530</real>
 			<key>ypos</key>
-			<real>255</real>
+			<real>240</real>
 		</dict>
 		<key>FF4B9971-0A0C-41A2-BB53-83A4D210134D</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>1005</real>
+			<real>985</real>
 			<key>ypos</key>
-			<real>565</real>
+			<real>550</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -3229,7 +3433,7 @@ continue previous chats</string>
 				<key>required</key>
 				<false/>
 				<key>text</key>
-				<string>Save conversations.</string>
+				<string>Save conversations</string>
 			</dict>
 			<key>description</key>
 			<string></string>
@@ -3286,6 +3490,25 @@ continue previous chats</string>
 			<key>variable</key>
 			<string>system_prompt</string>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Show model in footer</string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Options</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>show_model_chat_footer</string>
+		</dict>
 	</array>
 	<key>variables</key>
 	<dict>
@@ -3293,6 +3516,8 @@ continue previous chats</string>
 		<string>/Library/Developer/Xcode/DerivedData/Ollama-gveojumaikdecnfioxivavezkhtn/Build/Products/Debug/Alfred Ollama</string>
 		<key>chat_preferred_model</key>
 		<string>llama3.1:latest</string>
+		<key>manage_underline_info</key>
+		<string>1</string>
 		<key>mirostat</key>
 		<string></string>
 		<key>mirostat_eta</key>
@@ -3320,7 +3545,7 @@ continue previous chats</string>
 		<key>tfs_z</key>
 		<string></string>
 		<key>timeout</key>
-		<string>30</string>
+		<string>60</string>
 		<key>top_k</key>
 		<string>40</string>
 		<key>top_p</key>
@@ -3353,7 +3578,7 @@ continue previous chats</string>
 		<string>num_ctx</string>
 	</array>
 	<key>version</key>
-	<string>2.0.0</string>
+	<string>2.2.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/zeitlings/alfred-ollama</string>
 </dict>
