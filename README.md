@@ -2,7 +2,7 @@
 
 # Alfred Ollama
 
-<a href="https://github.com/zeitlings/alfred-ollama/releases/latest"><img src="https://img.shields.io/badge/download-v2.0.0-informational"></a>
+<a href="https://github.com/zeitlings/alfred-ollama/releases/latest"><img src="https://img.shields.io/badge/download-v2.2.0-informational"></a>
 
 Dehydrated [Ollama](https://ollama.com/) Command Line Interface interface to
 1. Manage your local language models
@@ -27,11 +27,17 @@ Manage your local models or chat with them via the `ollama` keyword. Alternative
 
 <img src="images/preview2.png" width="564px"/>
 
-- <kbd>↩</kbd> Open the model page.
-- <kbd>⇧</kbd> Quicklook preview the model page.
+- <kbd>↩</kbd> (or tap <kbd>⇥</kbd>) Show model information.
+- <kbd>⌘</kbd><kbd>Y</kbd> (or tap <kbd>⇧</kbd>) Quick Look the model page.
+- <kbd>⌘</kbd><kbd>↩</kbd> Open the model page.
 - <kbd>⌘</kbd><kbd>C</kbd> Copy the model name.
-- <kbd>⌘</kbd><kbd>↩</kbd> Remove the model.
 - <kbd>⌥</kbd><kbd>↩</kbd> Set as __preferred model__ for inference.
+- <kbd>⌘</kbd><kbd>⇧</kbd><kbd>↩</kbd> Remove the model.
+
+<img src="images/preview2.1.png" width="564px"/>
+
+- <kbd>↩</kbd> (or tap <kbd>⇥</kbd>) Return to installed models.
+- <kbd>⌘</kbd><kbd>L</kbd> View model info digest as [Large Type](https://www.alfredapp.com/help/features/large-type/).
 
 ### Loaded Models
 
@@ -43,9 +49,9 @@ Manage your local models or chat with them via the `ollama` keyword. Alternative
 
 <img src="images/preview4.png" width="564px"/>
 
-Type to match models based on your query.  
+Type to match models based on your query.
 - <kbd>↩</kbd> Open the model page.
-- <kbd>⇧</kbd> Quicklook preview the model page.
+- <kbd>⇧</kbd> Quick Look preview the model page.
 - <kbd>⌘</kbd><kbd>L</kbd> View the unabridged model description as large type.
 - <kbd>⌘</kbd><kbd>C</kbd> Copy the model name.
 - <kbd>⌘</kbd><kbd>↩</kbd> Pull `model:latest` from registry.
@@ -55,9 +61,9 @@ Type to match models based on your query.
 
 <img src="images/preview5.png" width="564px"/>
 
-Type to match versions based on your query.  
+Type to match versions based on your query.
 - <kbd>↩</kbd> Open the model page.
-- <kbd>⇧</kbd> Quicklook preview the model page.
+- <kbd>⌘</kbd><kbd>Y</kbd> (or tap <kbd>⇧</kbd>) Quick Look the model page.
 - <kbd>⌘</kbd><kbd>C</kbd> Copy the model name.
 - <kbd>⌘</kbd><kbd>↩</kbd> Pull `model:version` from registry.
 
@@ -87,7 +93,7 @@ Before chatting, ensure you have set a __preferred model__ as specified above. O
 
 ## Inference Actions
 
-> Inference Actions provide a suite of language tools for text generation and transformation. These tools enable summarization, clarification, concise writing, and tone adjustment for selected text. They can also correct spelling, expand and paraphrase text, follow instructions, answer questions, and improve text in other ways. 
+> Inference Actions provide a suite of language tools for text generation and transformation. These tools enable summarization, clarification, concise writing, and tone adjustment for selected text. They can also correct spelling, expand and paraphrase text, follow instructions, answer questions, and improve text in other ways.
 
 Access a list of all available actions via the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) or by setting the [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) trigger.
 
@@ -98,8 +104,8 @@ Access a list of all available actions via the [Universal Action](https://www.al
 - <kbd>↩</kbd> Generate answer in new window.
 - <kbd>⌘</kbd><kbd>↩</kbd> __Stream__ the result to the frontmost application.
 
-> [!IMPORTANT] 
-> Make sure you only use this if the frontmost UI Element accepts text.  
+> [!IMPORTANT]
+> Make sure you only use this if the frontmost UI Element accepts text.
 > There are no security checks in place at the moment.
 
 
@@ -107,10 +113,10 @@ Access a list of all available actions via the [Universal Action](https://www.al
 ---
 
 
-__Links:__  
+__Links:__
 * [ollama.com](https://ollama.com)
 * [Ollama Github FAQ](https://github.com/ollama/ollama/blob/main/docs/faq.md)
 * [Akazwz's ollama-models](https://github.com/akazwz/ollama-models)
 
-__Footnotes__  
+__Footnotes__
 [^1]: `xcode-select --install`
