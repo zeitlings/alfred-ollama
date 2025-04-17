@@ -13,7 +13,14 @@ update_models() {
     fi
 }
 
-[[ -z $(lsof -nP -i4TCP:${workflow_port}) ]] || is_ollama_running=true
+# Set the OLLAMA_HOST environment variable
+export OLLAMA_HOST=http://${workflow_host:-localhost}:${workflow_port:-11434}
+
+# Check if ollama is running using the `ollama --version` command
+if ! ollama --version | grep -q "could not connect to a running Ollama instance"; then
+    is_ollama_running=true
+fi
+
 [[ -d ${alfred_workflow_cache} ]] || /bin/mkdir -p "${alfred_workflow_cache}"
 [[ -f ${model_json} ]] || update_models
 
