@@ -2037,7 +2037,7 @@ killall ollama</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>curl -s http://localhost:${workflow_port}/api/generate -d "{\"model\": \"$1\", \"keep_alive\": 0}"</string>
+				<string>curl -s http://${workflow_host}:${workflow_port}/api/generate -d "{\"model\": \"$1\", \"keep_alive\": 0}"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
