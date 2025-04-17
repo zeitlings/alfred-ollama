@@ -116,13 +116,13 @@ extension Workflow {
 extension Workflow {
 	
 	enum AnnotationLog: String {
-		case warning = "[WARNING] "
-		case error = "[ERROR] "
-		case info = "[INFO] "
-		case debug = "[DEBUG] "
+		case warning = "[Warning] "
+		case error = "[Error] "
+		case info = "[Info] "
+		case debug = "[Debug] "
 		case none = ""
 	}
-	static func log(_ message: String, _ annotation: AnnotationLog = .none) {
+	static func log(_ annotation: AnnotationLog = .none, _ message: String) {
 		try? stdErr.write(contentsOf: Data("\(annotation.rawValue)\(message)\n".utf8))
 	}
 }

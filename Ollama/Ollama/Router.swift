@@ -18,11 +18,11 @@ struct Router {
 	let session: URLSession = .shared
 	let decoder: JSONDecoder = .init()
 	
-	init(endpoint: Endoint = .chat) {
+	init(endpoint: Endpoint = .chat) {
 		self.path = endpoint.rawValue
 	}
 	
-	enum Endoint: String {
+	enum Endpoint: String {
 		case chat = "/api/chat"
 		case generate = "/api/generate"
 	}

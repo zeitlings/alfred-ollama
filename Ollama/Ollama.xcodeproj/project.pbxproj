@@ -16,6 +16,7 @@
 		4505FB0A2C0B352F00A9B11E /* Ollama+Generate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4505FB092C0B352F00A9B11E /* Ollama+Generate.swift */; };
 		4505FB0C2C0E218E00A9B11E /* InferenceAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4505FB0B2C0E218E00A9B11E /* InferenceAction.swift */; };
 		450A22662BF3AEDC002B1179 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A22652BF3AEDC002B1179 /* main.swift */; };
+		45274F5B2DB0DED400081972 /* Ollama+ModelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45274F5A2DB0DED400081972 /* Ollama+ModelInfo.swift */; };
 		4597F59B2C19FB78001D0AF3 /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597F59A2C19FB78001D0AF3 /* Accessibility.swift */; };
 		45C42F242CA9A4D700ED1ED1 /* Ollama.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C42F232CA9A4D700ED1ED1 /* Ollama.swift */; };
 		45C42F3F2CA9ACD800ED1ED1 /* Types+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C42F3E2CA9ACD800ED1ED1 /* Types+Extension.swift */; };
@@ -45,6 +46,7 @@
 		4505FB0B2C0E218E00A9B11E /* InferenceAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InferenceAction.swift; sourceTree = "<group>"; };
 		450A22622BF3AEDC002B1179 /* Alfred Ollama */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Alfred Ollama"; sourceTree = BUILT_PRODUCTS_DIR; };
 		450A22652BF3AEDC002B1179 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		45274F5A2DB0DED400081972 /* Ollama+ModelInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ollama+ModelInfo.swift"; sourceTree = "<group>"; };
 		4597F59A2C19FB78001D0AF3 /* Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessibility.swift; sourceTree = "<group>"; };
 		4597F59D2C1B2126001D0AF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45C42F232CA9A4D700ED1ED1 /* Ollama.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ollama.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				4505FAFB2C08B37400A9B11E /* ChatResponse.swift */,
 				4505FB0B2C0E218E00A9B11E /* InferenceAction.swift */,
 				45C42F402CA9AD8D00ED1ED1 /* Ollama+Model.swift */,
+				45274F5A2DB0DED400081972 /* Ollama+ModelInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				4505FB082C08D87D00A9B11E /* FileHandler.swift in Sources */,
 				45C42F412CA9AD8D00ED1ED1 /* Ollama+Model.swift in Sources */,
 				4597F59B2C19FB78001D0AF3 /* Accessibility.swift in Sources */,
+				45274F5B2DB0DED400081972 /* Ollama+ModelInfo.swift in Sources */,
 				4505FB022C08CB7B00A9B11E /* Router.swift in Sources */,
 				4505FB0A2C0B352F00A9B11E /* Ollama+Generate.swift in Sources */,
 				4505FB062C08D59800A9B11E /* Ollama+Chat.swift in Sources */,
@@ -335,8 +339,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = Ollama/Ollama.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = U238XAT93R;
 				DONT_GENERATE_INFOPLIST_FILE = NO;
@@ -345,7 +350,7 @@
 				ENABLE_ON_DEMAND_RESOURCES = NO;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/Ollama/Info.plist";
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zeitlings.alfred.ollama;
 				PRODUCT_NAME = "Alfred $(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -356,8 +361,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = Ollama/Ollama.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = U238XAT93R;
 				DONT_GENERATE_INFOPLIST_FILE = NO;
@@ -366,7 +372,7 @@
 				ENABLE_ON_DEMAND_RESOURCES = NO;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/Ollama/Info.plist";
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zeitlings.alfred.ollama;
 				PRODUCT_NAME = "Alfred $(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

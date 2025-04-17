@@ -30,7 +30,7 @@ extension FileHandler {
 	static func streamFileContent(function: String = #function) throws -> (content: String, finished: Bool, isStale: Bool) {
 		
 		guard fm.fileExists(.streamFile) else {
-			Workflow.log(function)
+			Workflow.log(.debug, function)
 			if Environment.responseGenerationWasCancelled {
 				return ("", true, false)
 			} else {
@@ -70,7 +70,6 @@ extension FileHandler {
 	static func chatMessages(function: String = #function) throws -> [Message] {
 		guard fm.fileExists(.chatFile) else {
 			throw FileHandlerError.chatFileDoesNotExist
-			//return try createChat(.user, content: "Precondition failure: Chat File must exist. (\(function))")
 		}
 		let content: Data = try Data(contentsOf: .chatFile)
 		let messages: [Message] = try JSONDecoder().decode([Message].self, from: content)
@@ -79,15 +78,9 @@ extension FileHandler {
 	
 	/// Append message to chat, saving the entire conversation.
 	@discardableResult
-	//static func appendChat(_ role: Message.Role, content: String) throws -> [Message] {
-	static func appendChat(
-		_ role: Message.Role,
-		content: String
-	) throws -> [Message] {
+	static func appendChat(_ role: Message.Role, content: String) throws -> [Message] {
 		var chat: [Message] = try chatMessages()
-		chat.append(
-			Message(role: role, content: content)
-		)
+		chat.append( Message(role: role, content: content) )
 		try save(chat: chat)
 		return chat
 	}
@@ -161,21 +154,19 @@ extension FileHandler {
 // MARK: - FileHandler Utils
 extension FileHandler {
 	static func createCacheDirectory() throws {
-		let cachePath: String = Environment.workflowCacheDirectory
+		let cachePath: String = Environment.workflowCache
 		if !fm.fileExists(atPath: cachePath) {
 			try fm.createDirectory(atPath: cachePath, withIntermediateDirectories: true)
 		}
 	}
 	
 	static func createDataDirectory() throws {
-		let dataPath: String = Environment.workflowDataDirectory
+		let dataPath: String = Environment.workflowData
 		if !fm.fileExists(atPath: dataPath) {
 			try fm.createDirectory(atPath: dataPath, withIntermediateDirectories: true)
 		}
 	}
 }
-
-
 
 
 // MARK: - File Handler Error
@@ -202,13 +193,14 @@ extension FileHandler {
 
 // MARK: - File Handler Extensions
 extension URL {
-	static let streamFile: URL = .init(path: Environment.workflowCacheDirectory).appending(component: "stream").appendingPathExtension("txt")
-	static let chatFile: URL = .init(path: Environment.workflowCacheDirectory).appending(component: "chat").appendingPathExtension("json")
-	static let pidFile: URL = .init(path: Environment.workflowCacheDirectory).appending(component: "pid").appendingPathExtension("txt")
-	static let errorFile: URL = .init(path: Environment.workflowCacheDirectory).appending(component: "error").appendingPathExtension("txt")
-	static let debugFile: URL = .init(path: Environment.workflowCacheDirectory).appending(component: "debug").appendingPathExtension("txt")
 
-	static let inferenceActionsFile: URL = .init(path: Environment.workflowPath).appending(component: "actions").appending(component: "actions").appendingPathExtension("json")
+	static let streamFile: URL = .init(file: Environment.workflowCache) / "stream" + "txt"
+	static let errorFile: URL = .init(file: Environment.workflowCache) / "error" + "txt"
+	static let debugFile: URL = .init(file: Environment.workflowCache) / "debug" + "txt"
+	static let chatFile: URL = .init(file: Environment.workflowCache) / "chat" + "json"
+	static let pidFile: URL = .init(file: Environment.workflowCache) / "pid" + "txt"
+
+	static let inferenceActionsFile: URL = .init(file: Environment.workflowPath) / "actions" / "actions" + "json"
 }
 
 extension URL {

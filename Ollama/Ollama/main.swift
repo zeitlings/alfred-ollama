@@ -5,5 +5,6 @@
 //  <https://github.com/zeitlings/alfred-ollama>
 //
 
-Ollama.run()
+await Ollama.run()
+try? await Task.sleep(for: .seconds(5))
 

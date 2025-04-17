@@ -10,13 +10,15 @@ import Foundation
 struct Environment {
 	
 	static let environment: [String:String] = ProcessInfo.processInfo.environment
-	static let workflowCacheDirectory: String = environment["alfred_workflow_cache"]!
-	static let workflowDataDirectory: String = environment["alfred_workflow_data"]!
+	static let workflowCache: String = environment["alfred_workflow_cache"]!
+	static let workflowData: String = environment["alfred_workflow_data"]!
 	static let workflowBundleID: String? = environment["alfred_workflow_bundleid"]
 	private static let preferences: String = environment["alfred_preferences"]!
 	private static let workflowUID: String = environment["alfred_workflow_uid"]!
 	static let workflowPath: String = "\(preferences)/workflows/\(workflowUID)"
 	
+	// MARK: Manage
+	static let underlineModelInfo: Bool = environment["manage_underline_info"] == "1"
 	
 	// MARK: Program State
 	enum ProgramState: String {
@@ -84,7 +86,7 @@ struct Environment {
 	/// The target content of an inference task, e.g. text sent by the user via an universal action.
 	static let inferenceActionPayload: String? = getDefined("action_payload")
 	static let inferenceActionIdentifier: String? = getDefined("action_dispatch_id")
-	static let exportLocation: String = getDefined("workflow_export_location") ?? workflowDataDirectory
+	static let exportLocation: String = getDefined("workflow_export_location") ?? workflowData
 	
 	
 	@inline(__always)

@@ -19,6 +19,7 @@ struct Item: Codable, Inflatable {
 	var text: Text?
 	var cmd: Modifier?
 	var alt: Modifier?
+	var cmdShift: Modifier?
 
 	init(
 		title: String,
@@ -51,6 +52,7 @@ struct Item: Codable, Inflatable {
 	}
 	
 	init() { self.init(title: "") }
+	
 }
 
 
@@ -77,8 +79,8 @@ extension Item {
 		try container.encodeIfPresent(variables, forKey: .variables)
 		try container.encodeIfPresent(match, forKey: .match)
 		
-		if ![cmd, alt].allSatisfy({ $0 == nil }) {
-			let wrapper = Mods(cmd: cmd, alt: alt)
+		if ![cmd, alt, cmdShift].allSatisfy({ $0 == nil }) {
+			let wrapper = Mods(cmd: cmd, alt: alt, cmdShift: cmdShift)
 			try container.encode(wrapper, forKey: .mods)
 		}
 	}
@@ -97,6 +99,7 @@ extension Item {
 		let wrapper: Mods? = try container.decodeIfPresent(Mods.self, forKey: .mods)
 		cmd = wrapper?.cmd ?? nil
 		alt = wrapper?.alt ?? nil
+		cmdShift = wrapper?.cmdShift ?? nil
 	}
 }
 

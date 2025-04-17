@@ -72,7 +72,7 @@ extension Ollama {
 			response.response = messages.formattedMarkdown
 			response.behaviour = .init(.replace, .auto)
 			if Workflow.showModelInFooter, let model: String = Ollama.preferredModel {
-				response.footer = "⏎ Ask question  ·  ⌘⏎ New chat  ·  ⌥⏎ View history  ·  ⇧⌥⏎ Stop  〈    \(model)"
+				response.footer = "⏎ Ask question  ·  ⌘⏎ New chat  ·  ⌥⏎ View history  ·  ⌃⏎ Stop  〈    \(model)"
 			}
 			try? FileHandler.removeStreamFile()
 			try? FileHandler.removePIDFile()
@@ -121,7 +121,7 @@ extension Ollama {
 			$0.response = messages.formattedMarkdown
 			$0.behaviour = .init(scroll: .end)
 			if Workflow.showModelInFooter, let model: String = Ollama.preferredModel {
-				$0.footer = "⏎ Ask question  ·  ⌘⏎ New chat  ·  ⌥⏎ View history  ·  ⇧⌥⏎ Stop  〈    \(model)"
+				$0.footer = "⏎ Ask question  ·  ⌘⏎ New chat  ·  ⌥⏎ View history  ·  ⌃⏎ Stop  〈    \(model)"
 			}
 		}))
 	}

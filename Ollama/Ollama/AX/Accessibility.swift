@@ -1,4 +1,4 @@
-//
+// 
 //  Accessibility.swift
 //  Ollama
 //
@@ -11,7 +11,7 @@ struct AX {
 	let pid: pid_t
 	static let shared: AX = {
 		guard let frontMostPID: pid_t = NSWorkspace.shared.frontmostApplication?.processIdentifier else {
-			Workflow.log("Unable to get PID of frontmost application", .error)
+			Workflow.log(.error, "Unable to get PID of frontmost application")
 			Workflow.exit(.failure)
 		}
 		return .init(pid: frontMostPID)
@@ -20,9 +20,9 @@ struct AX {
 
 // MARK: - Strat: Simulate Keystrokes
 extension AX {
-	
+
 	private static func simulateKeystroke(_ character: String, count: Int = 1) {
-		
+
 		guard let source = CGEventSource(stateID: .hidSystemState) else {
 			return
 		}
@@ -38,14 +38,14 @@ extension AX {
 			usleep(5000) // 5ms
 		}
 	}
-	
-	
+
+
 	/// <https://eastmanreference.com/complete-list-of-applescript-key-codes>
 	enum KeyCode: CGKeyCode {
 		case arrowRight = 124
 		case escape = 53
 	}
-	
+
 	private static func simulateKeystroke(keyCode: KeyCode, modifiers: CGEventFlags = []) {
 		guard let source = CGEventSource(stateID: .hidSystemState) else {
 			return
@@ -58,26 +58,26 @@ extension AX {
 		keyUp?.postToPid(AX.shared.pid)
 		usleep(5000) // 5ms
 	}
-	
+
 	static func requestAccessibilityPermissions() -> Bool {
 		let options: CFDictionary = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String: true] as CFDictionary
 		let granted: Bool = AXIsProcessTrustedWithOptions(options)
 		if !granted {
-			Workflow.log("Accessibility permissions are not enabled. Prompting for permissions...", .info)
+			Workflow.log(.info, "Accessibility permissions are not enabled. Prompting for permissions...")
 		}
 		return granted
 	}
-	
+
 	static func deselect() {
 		simulateKeystroke(keyCode: .arrowRight)
 		simulateKeystroke(keyCode: .arrowRight)
 		simulateKeystroke("\n", count: 2)
 	}
-	
+
 	static func finish() {
 		simulateKeystroke("\n", count: 2)
 	}
-	
+
 	static func stream(chunk text: String) {
 		for char in text {
 			simulateKeystroke(.init(char))
@@ -86,5 +86,5 @@ extension AX {
 			//usleep(3000) // 3ms
 		}
 	}
-	
+
 }

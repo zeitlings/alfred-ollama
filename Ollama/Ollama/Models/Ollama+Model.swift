@@ -31,11 +31,21 @@ extension Models.Model {
 				$0.subtitle += " ★"
 			}
 			$0.text = Text(copy: name, largetype: "\(name)\n\(id ?? "n/A")\n\($0.subtitle)")
-			$0.addVariable(key: "trigger", "open")
+			//$0.addVariable(key: "trigger", "open")
 			$0.arg = .string(url)
 			$0.quicklookurl = url
+			$0.autocomplete = "\(name)/ "
+			$0.valid = false
 			
 			$0.cmd = Modifier(
+				arg: .string(url),
+				subtitle: "Open model page for '\(name)'",
+				icon: .info,
+				variables: .nested(["trigger":.string("open")]),
+				valid: true
+			)
+			
+			$0.cmdShift = Modifier(
 				arg: .string(name),
 				subtitle: "Remove \(name)",
 				icon: .remove,

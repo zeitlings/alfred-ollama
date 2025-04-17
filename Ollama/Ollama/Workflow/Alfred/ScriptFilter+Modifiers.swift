@@ -9,9 +9,11 @@
 struct Mods: Codable {
 	let cmd: Modifier?
 	let alt: Modifier?
-	init(cmd: Modifier? = nil, alt: Modifier? = nil) {
+	let cmdShift: Modifier?
+	init(cmd: Modifier? = nil, alt: Modifier? = nil, cmdShift: Modifier? = nil) {
 		self.cmd = cmd
 		self.alt = alt
+		self.cmdShift = cmdShift
 	}
 }
 
@@ -42,11 +44,13 @@ struct Modifier: Codable, Equatable {
 extension Mods {
 	enum CodingKeys: String, CodingKey {
 		case cmd, alt
+		case cmdShift = "cmd+shift"
 	}
 	func encode(to encoder: Encoder) throws {
 		var container = encoder.container(keyedBy: CodingKeys.self)
 		try container.encodeIfPresent(cmd, forKey: .cmd)
 		try container.encodeIfPresent(alt, forKey: .alt)
+		try container.encodeIfPresent(cmdShift, forKey: .cmdShift)
 	}
 	
 }

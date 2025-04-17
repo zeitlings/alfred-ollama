@@ -21,9 +21,7 @@ extension Workflow {
 		}
 		let command: String = "open alfred://runtrigger/\(bundleId)/\(triggerId)/?argument=\(encoded)"
 		process.shell(command)
-		if exit {
-			Self.exit(.success)
-		}
+		if exit { Self.exit(.success) }
 		return nil
 	}
 }

@@ -17,19 +17,18 @@ struct Ollama {
 		? (arguments[1].applyingTransform(StringTransform("[:Punctuation:] Publishing"), reverse: false) ?? arguments[1])
 		: ""
 
-	static let modelFile: URL = URL(path: arguments[2])
+	static let modelFile: URL = URL(file: arguments[2])
 	static let isRunning: Bool = Bool(arguments[3])!
 	static let installedModelsRaw: String = arguments[4]
-	static let loadedModelsRaw: ArraySlice<Substring> = arguments[5].split(separator: "\n").dropFirst()
 	static let ollamaVersion: String = arguments[6]
-	static let progressFile: URL = modelFile.deletingLastPathComponent().appending(component: "pull_progress").appendingPathExtension("txt")
-	static let progressInfoFile: URL = modelFile.deletingLastPathComponent().appending(component: "pull_info").appendingPathExtension("txt")
-	static let fm: FileManager = .default
+	static let progressFile: URL = modelFile.deletingLastPathComponent() / "pull_progress" + "txt"
+	static let progressInfoFile: URL = modelFile.deletingLastPathComponent() / "pull_info" + "txt"
+	static let loadedModelsRaw: ArraySlice<Substring> = arguments[5].split(separator: "\n").dropFirst()
 
 	// MARK: Ollama Run Main
-	static func run() {
+	static func run() async {
 		switch Environment.programState {
-		case .manage: manage()
+		case .manage: await manage()
 		case .chat: chat()
 		case .generate: generateStreaming()
 		case .actions: listActions()
@@ -66,7 +65,8 @@ extension Ollama {
 		return (name: name, size: size, processor: processor, remaining: remaining)
 	})
 	
-	static let preferredModelIsLoaded: Bool = preferredModel.map({ pref in loadedModelsInfo.contains(where: { $0.name == pref }) }) ?? false
+	static let preferredModelIsLoaded: Bool = preferredModel
+		.map({ pref in loadedModelsInfo.contains(where: { $0.name == pref }) }) ?? false
 	
 	
 	static let installedModels: [Model]? = {
@@ -74,13 +74,9 @@ extension Ollama {
 			.split(separator: "\n")
 			.filter({ !$0.hasPrefix("NAME") })
 			.map({ line in
-				//let debugTabCount: Int = line.count(where: { $0 == "\t" })
-				//Workflow.log("Installed Models tab count: \(debugTabCount)")
-				//Workflow.log("Line: <\(line)>")
 				let line: Substring = line.replacing("    ", with: "\t")
 				let parts: [String] = String(line).components(separatedBy: "\t").map({ $0.trimmed }).filter({ !$0.isEmpty})
 				return Model(name: parts[0], description: nil, tags: nil, id: parts[1], size: parts[2], modified: parts[3])
-				//return Model(name: parts[0].trimmed, description: nil, tags: nil, id: parts[1], size: parts[2], modified: parts[3])
 			})
 		return m.isEmpty ? nil : m
 	}()
@@ -120,7 +116,7 @@ extension Ollama {
 // MARK: - Ollama+Manage
 
 extension Ollama {
-	private static func manage() {
+	private static func manage(fm: FileManager = .default) async {
 		var response = ScriptFilterResponse(items: [.with({
 			$0.title = "\(isRunning ? "Ollama is running" : "Ollama is sleeping")"
 			$0.valid = false
@@ -337,6 +333,42 @@ extension Ollama {
 				response.append(contentsOf: installedModels.map({ $0.installedModelItem }))
 			}
 			
+		case .showInfo:
+			
+			response.items.removeAll()
+			do {
+				let input: [String] = userInput.components(separatedBy: "/")
+				guard input.count == 2 else {
+					throw NSError(domain: "Invalid command structure", code: 0, userInfo: nil)
+				}
+				let model: String = input[0]
+				let query: [String] = input[1].trimmed.isEmpty ? []
+					: input[1].components(separatedBy: .whitespaces).filter({ !$0.isEmpty })
+				
+				let info: [Item] = try await ModelConfiguration.fetch(for: model).alfredItems
+					.filter({ item in
+						query.isEmpty || (
+							query.allSatisfy { c in
+								item.title.hasSubstring(c) ||
+								item.subtitle.hasSubstring(c)
+							}
+						)
+					})
+				
+				response.append(contentsOf: info)
+				
+			} catch {
+				Workflow.log(.error, error.localizedDescription)
+				response.append(item: .with({
+					$0.title = "Something went wrong..."
+					//$0.subtitle = error.localizedDescription
+					let components: [String] = userInput.components(separatedBy: "/")
+					$0.subtitle = "\(error.localizedDescription) | Model: \(components[0])"
+					$0.valid = false
+					$0.icon = .stop
+				}))
+			}
+			
 			
 		case .loadedModels:
 			
@@ -380,12 +412,16 @@ enum DirectiveManage {
 	case loadedModels
 	case findModels
 	case listModels
+	case showInfo
 	case entry
 	
 	init(_ query: inout String) {
 		switch true {
 		case query.firstMatch(of: /\/[\w.-]+?\//) != nil:
 			self = .findModelsTag
+			
+		case query.firstMatch(of: /[\w.-]+?\//) != nil:
+			self = .showInfo
 
 		case query.hasPrefix("///"):
 			query = query.dropFirst(3).trimmed

@@ -94,16 +94,16 @@ extension Ollama {
 //					}
 				} catch let DecodingError.keyNotFound(key, context) {
 					let debugMessage: String = "\n\nKey '\(key.stringValue)' not found: \(context.debugDescription). CodingPath: \(context.codingPath)"
-					Workflow.log("\(debugMessage)")
+					Workflow.log(.debug, "\(debugMessage)")
 					Workflow.exit(.failure)
 					
 				} catch let DecodingError.dataCorrupted(context) {
 					let debugMessage: String = "\n\n__[Decoding Error > Data Corrupted]__ \(context.debugDescription).  \n> __Coding Path:__ \(context.codingPath)."
-					Workflow.log("\(debugMessage)")
+					Workflow.log(.debug, "\(debugMessage)")
 					Workflow.exit(.failure)
 				} catch {
 					// TODO: Extra error handling
-					Workflow.log("[Generate] Error Description: \(error.localizedDescription)")
+					Workflow.log(.debug, "[Generate] Error Description: \(error.localizedDescription)")
 					Workflow.exit(.failure)
 				}
 			}
@@ -111,7 +111,7 @@ extension Ollama {
 			
 			
 		} catch {
-			Workflow.log(error.localizedDescription)
+			Workflow.log(.error, error.localizedDescription)
 			Workflow.exit(.failure)
 		}
 		
